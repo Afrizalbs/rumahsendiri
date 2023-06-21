@@ -1,0 +1,198 @@
+* {
+  font-family: "Poppins";
+}
+
+.navbar .container .nav-wrapper > ul > li > a:hover {
+  color: #20a79c !important;
+  border-bottom: 2px solid #20a79c;
+}
+
+#main {
+  display: none;
+}
+
+#mySidebar {
+  display: none;
+}
+
+#jumbotron {
+  background-image: url("./assets/image/bg-header.png");
+  max-width: 1394px;
+  height: 590px;
+  padding-top: 132px;
+}
+
+#jumbotron .jumbotron-subtitle {
+  max-width: 791px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.custom-group-mobile {
+  display: none;
+}
+
+.custom-group {
+  border-radius: 500px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #c6e7e4;
+}
+
+.custom-group .custom-select {
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+  /* padding-left: 26px; */
+}
+
+.banner-wrapper {
+  max-width: 729px;
+  max-height: 202px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+.recommend-subtitle {
+  max-width: 777px;
+  font-size: 15px;
+}
+
+.recommend-card:hover {
+  background-color: #f4fffe;
+  cursor: pointer;
+}
+
+.recommend-card .card-body .card-title:hover {
+  color: #4ea59c;
+}
+
+.recommend .slick-slide {
+  margin: 0 30px;
+}
+
+.recommend .recommend-card img {
+  margin: 0 auto;
+}
+
+.slick-dots {
+  margin-top: 20px !important;
+  list-style-type: none;
+  /* background-color: #4ea59c; */
+}
+
+.recommend .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #dadada;
+  text-indent: -9999px;
+}
+
+.recommend .slick-dots .slick-active button {
+  background-color: #4ea59c;
+}
+
+.find-house-wrapper div img {
+  margin: 0 auto;
+}
+
+.kpr-simulation {
+  margin-top: 88px;
+  padding-bottom: 135px;
+}
+
+.kpr-simulation .simulation-wrapper {
+  margin-top: 59px;
+  padding: 0 50px;
+}
+
+.kpr-simulation .simulation-wrapper .desktop-view {
+  display: block;
+}
+
+.kpr-simulation .simulation-wrapper .mobile-view {
+  display: none;
+}
+
+.custom-group-simulation {
+  border-radius: 500px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #dbdbdb;
+}
+
+.about {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.mitra {
+  padding: 135px 0;
+}
+
+.card-testimoni-wrapper .slick-slide {
+  margin: 0 30px;
+  max-width: 524px;
+  background-color: #fff;
+}
+
+.card-testimoni-wrapper .slick-slide:hover {
+  background-color: #e1f5f3;
+}
+
+.card-testimoni-wrapper .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #dadada;
+  text-indent: -9999px;
+}
+
+.card-testimoni-wrapper .slick-dots .slick-active button {
+  background-color: #4ea59c;
+}
+
+.news-wrapper .slick-slide {
+  margin: 0 40px;
+}
+
+.news-wrapper .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #dadada;
+  text-indent: -9999px;
+}
+
+.news-wrapper .slick-dots .slick-active button {
+  background-color: #4ea59c;
+}
+
+.news-card:hover {
+  background-color: #f4fffe;
+  cursor: pointer;
+}
+
+.footer-desktop {
+  display: block;
+  margin-top: 62px;
+  background-color: #455b59;
+  padding-top: 111px;
+  padding-bottom: 52px;
+}
+
+.footer-mobile {
+  display: none;
+}

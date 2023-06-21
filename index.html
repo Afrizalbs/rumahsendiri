@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rumah Sendiri</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="select.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container py-2">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/main-logo.png" alt="rumah sederhana" width="189" height="58">
+                </a>
+                <div id="mySidebar" class="sidebar" data-bs-theme="dark">
+                    <a href="javascript:void(0)" class="closebtn btn-close" onclick="closeNav()"></a>
+                    <a href="#">Home</a>
+                    <a href="#">Simulasi KPR</a>
+                    <a href="#">Berita</a>
+                    <a href="#">Ajak Teman</a>
+                    <button class="btn btn-warning py-3 px-5 rounded-pill fw-medium" type="button"
+                        id="button-addon1"><img src="/assets/login.svg"> Login</button>
+                </div>
+
+                <div id="main">
+                    <button class="btn" onclick="openNav()"><img src="/assets/menu.svg" alt=""></button>
+                </div>
+                <div class="nav-wrapper d-flex flex-column gap-2">
+                    <div class="nav justify-content-end" style="font-weight: 400; font-size: 12px;">
+                        <li class="nav-item d-flex">
+                            <img src="/assets/login.svg" alt="" style="width: 17px;">
+                            <a class="nav-link  text-black" aria-current="page" href="#">Login</a>
+                        </li>
+                        <li class="nav-item d-flex">
+                            <img src="/assets/favorite.svg" alt="">
+                            <a class="nav-link text-black" href="#">Favorite</a>
+
+                        </li>
+                        <li class="nav-item d-flex">
+                            <img src="/assets/compare.svg" alt="">
+                            <a class="nav-link text-black" href="#">Bandingkan</a>
+                        </li>
+                        </li>
+                    </div>
+                    <ul class="nav d-flex gap-5 justify-content-end"
+                        style="font-family: 'Poppins'; font-weight: 500; font-size: 15px;">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Simulasi KPR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Berita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Ajak Teman</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div id="jumbotron" class="mx-auto">
+                <h1 class="text-center mx-auto">Saatnya Punya Rumah Sendiri</h1>
+                <p class="jumbotron-subtitle text-center pt-2 mx-auto">Lorem ipsum
+                    dolor sit amet, consectetur adipiscing
+                    elit, sed do
+                    eiusmod tempor
+                    incididunt ut labore et
+                    dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                    accumsan
+                    lacus vel facilisis. </p>
+                <div class="custom-group-mobile container">
+                    <select class="form-select form-select-lg rounded-pill">
+                        <option selected>Jenis</option>
+                        <option value="1">Semua</option>
+                        <option value="2">Subsidi</option>
+                        <option value="3">Non Subsidi</option>
+                    </select>
+                    <select class="form-select form-select-lg rounded-pill">
+                        <option value="0" selected>Harga</option>
+                        <option value="3">
+                            < 200JT</option>
+                        <option value="1">200JT - 400JT</option>
+                        <option value="2">401JT - 700JT</option>
+                        <option value="2">700JT ++</option>
+                    </select>
+                    <div class="input-group rounded-pill">
+                        <input type="text" class="custom-input form-control rounded-start-pill border-0"
+                            placeholder="Lokasi/Proyek">
+                        <button type="button" class="btn btn-warning rounded-circle fw-semibold"><img
+                                src="/assets/search.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="custom-group input-group mx-auto" style="max-width: 791px;">
+                    <!-- <select class="custom-select form-select" style="font-size: 15px; font-weight: 400;">
+                        <option selected>Jenis</option>
+                        <option value="1">Subsidi</option>
+                        <option value="2">Non Subsidi</option>
+                    </select> -->
+                    <div class="custom-select">
+                        <select>
+                            <option value="0">Jenis</option>
+                            <option value="3">Semua</option>
+                            <option value="1">Subsidi</option>
+                            <option value="2">Non Subsidi</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Lokasi/Proyek"
+                        style="font-size: 15px; font-weight: 400;">
+                    <!-- <select class="form-select border-end-0" style="font-size: 15px; font-weight: 400;">
+                        <option selected>Harga</option>
+                        <option value="1">
+                            < 200JT </option>
+                        <option value="2">200JT - 400JT</option>
+                    </select> -->
+                    <div class="custom-select">
+                        <select>
+                            <option value="0">Harga</option>
+                            <option value="3">
+                                < 200JT</option>
+                            <option value="1">200JT - 400JT</option>
+                            <option value="2">401JT - 700JT</option>
+                            <option value="2">700JT ++</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-warning py-3 px-5 rounded-pill" type="button"
+                        id="button-addon1">CARI</button>
+                </div>
+                <div class="container mx-auto d-flex align-items-center justify-content-end gap-2"
+                    style="max-width: 791px;margin-top: 15px;">
+                    <p class="fw-light" style="margin: 0; font-size: 15px;">Pencarian lebih lanjut</p>
+                    <img src="/assets/arrow-down.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="banner-wrapper mx-auto my-5">
+                <div><img src="/assets/image/banner.png" alt=""></div>
+                <div><img src="/assets/image/banner.png" alt=""></div>
+                <div><img src="/assets/image/banner.png" alt=""></div>
+            </div>
+
+            <h2 class="recommend-title text-center mt-4">Rekomendasi</h2>
+            <p class="recommend-subtitle text-center mx-auto">Lorem ipsum
+                dolor sit amet,
+                consectetur
+                adipiscing elit,
+                sed do eiusmod tempor
+                incididunt ut labore et
+                dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+
+            <div class="my-5">
+                <section class="recommend">
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <h2 class="recommend-title text-center" style="margin-top: 100px;">Terbaru</h2>
+            <p class="recommend-subtitle text-center mx-auto">Lorem ipsum dolor sit amet,
+                consectetur
+                adipiscing elit,
+                sed do eiusmod tempor
+                incididunt ut labore et
+                dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+
+            <div class="my-5">
+                <section class="recommend">
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <h2 class="recommend-title text-center" style="margin-top: 100px;">Subsidi</h2>
+            <p class="recommend-subtitle text-center mx-auto">Lorem ipsum dolor sit amet,
+                consectetur
+                adipiscing elit,
+                sed do eiusmod tempor
+                incididunt ut labore et
+                dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+
+            <div class="my-5">
+                <section class="recommend">
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                    <div class="recommend-card card rounded-4" style="max-width: 257px;">
+                        <img src="/assets/image/home.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Kencana Mas Residence</h6>
+                            <p class="card-text" style="color: #666666; font-size: 14px; font-weight: 400;">Cikeas
+                                Residence, Bogor</p>
+                            <p class="card-text" style="font-size: 14px;">LT mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 80m2</span>
+                            </p>
+                            <p class="card-text" style="font-size: 14px;">LB mulai dari: <span
+                                    style="font-weight: 700;color: #666666"> 60m2</span>
+                            </p>
+                            <p class="card-text">Mulai dari: <span style="font-weight: 600;"> Rp 140.000.000</span></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <h2 class="recommend-title text-center" style="margin-top: 100px;">Temukan rumah idaman di daerah Anda</h2>
+            <div class="find-house-wrapper mx-auto my-5">
+                <div> <img src="/assets/image/cluster.png" alt=""> </div>
+                <div><img src="/assets/image/cluster.png" alt=""></div>
+                <div><img src="/assets/image/cluster.png" alt=""></div>
+                <div><img src="/assets/image/cluster.png" alt=""></div>
+            </div>
+            <div class="mx-auto text-center" style="margin: 50px 0;">
+                <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
+                    style="padding: 16px 54px;">Gunakan
+                    Peta</button>
+            </div>
+
+            <section class="kpr-simulation container">
+                <h2 class="text-center">Simulasi KPR</h2>
+                <div class="simulation-wrapper row">
+                    <div class="col">
+                        <img src="/assets/image/kpr-illustration.png" alt="">
+                    </div>
+                    <div class="mobile-view">
+                        <p style="font-size: 14px;">Kemampuan Angsuran per bulan</p>
+                        <input type="text" class="form-control rounded-pill border-1" placeholder="Rp."
+                            style="font-size: 15px; font-weight: 400;padding: 15px 30px;margin-bottom: 40px;">
+                        <p style="font-size: 14px;">Jangka waktu KPR</p>
+                        <select class="form-select form-select-lg rounded-pill fs-6 py-3 px-4">
+                            <option selected>1 Tahun</option>
+                            <option value="1">5 Tahun</option>
+                            <option value="2">10 Tahun</option>
+                            <option value="3">15 Tahun</option>
+                        </select>
+                        <p style="font-size: 14px; margin-top: 40px;">Pilih Bank dan suku bunganya</p>
+                        <div class="payment">
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p class="text-center" style="font-size: 12px; margin-top: 5px;">Bunga 5%</p>
+                            </div>
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p class="text-center" style="font-size: 12px; margin-top: 5px;">Bunga 5%</p>
+                            </div>
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p class="text-center" style="font-size: 12px; margin-top: 5px;">Bunga 5%</p>
+                            </div>
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p class="text-center" style="font-size: 12px; margin-top: 5px;">Bunga 5%</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
+                                style="padding: 16px 54px;">Hitung</button>
+                        </div>
+                    </div>
+                    <div class="dekstop-view col">
+                        <div class="row">
+                            <p class="col" style="font-size: 12px;">Kemampuan Angsuran per bulan</p>
+                            <p class="col" style="font-size: 12px;">Jangka waktu KPR</p>
+                        </div>
+                        <div class="row">
+                            <p class="col" style="font-weight: 600; font-size: 18px;">Rp. 2.000.000,-</p>
+                            <p class="col" style="font-weight: 600; font-size: 18px;">1 tahun</p>
+                        </div>
+                        <div class="row" style="margin-top: 30px;">
+                            <p class="col" style="font-size: 12px;">Bank</p>
+                            <p class="col" style="font-size: 12px;">Harga Properti Maksimal Anda</p>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex flex-column align-items-center justify-content-end">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                            </div>
+                            <input type="text" class="col rounded-4"
+                                style="border-width: 2px; border: solid; border-color: #4EA59C;font-weight: 700; font-size: 30px; padding: 20px 30px;"
+                                value="Rp. 3.000.000,-" readonly>
+                            <p class="text-center fw-light" style="margin-top: 26px; font-size: 14px; color: #616768;">
+                                Anda dapat
+                                mencari secara langsung
+                                properti
+                                dengan harga maksimal di atas dengan
+                                memasukkan lokasi yang Anda inginkan</p>
+                        </div>
+                        <div class="row" style="margin-top: 45px;">
+                            <div class="col">
+                                <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
+                                    style="padding: 18px 34px;">Hitung Ulang</button>
+                            </div>
+                            <div class="col-7">
+                                <div class="custom-group-simulation input-group">
+                                    <input type="text" class="custom-input form-control rounded-start-pill border-0"
+                                        placeholder="Lokasi/Proyek"
+                                        style="font-size: 15px; font-weight: 400;padding: 18px 31px;">
+                                    <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
+                                        style="padding: 18px 22px;">Cari</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <section class="about container">
+            <h2 class="recommend-title text-center">Kenapa pilih Rumah Sendiri?</h2>
+            <div class="row gap-5" style="margin-top: 50px;">
+                <div class="col-sm">
+                    <img src="/assets/secure.svg" alt="" style="height: 61px;">
+                    <p class="fw-semibold fs-5" style="margin-top: 25px;margin-bottom: 10px;">Aman Banget</p>
+                    <p class="fw-light" style="font-size: 14px; color: #616768;">Developernya sudah diseleksi, bisa
+                        lihat site plan, IMB
+                        dan izin terkait
+                        lainnya.</p>
+                </div>
+                <div class="col-sm">
+                    <img src="/assets/gampang.svg" alt="" style="height: 61px;">
+                    <p class="fw-semibold fs-5" style="margin-top: 25px;margin-bottom: 10px;">Gampang pakainya</p>
+                    <p class="fw-light" style="font-size: 14px; color: #616768;">Cari rumahnya langsung lihat peta
+                        lokasi, simpan sebagai favorite dan bandingkan 3 rumah sekaligus.</p>
+                </div>
+                <div class="col-sm">
+                    <img src="/assets/canggih.svg" alt="" style="height: 61px;">
+                    <p class="fw-semibold fs-5" style="margin-top: 25px;margin-bottom: 10px;">Canggih</p>
+                    <p class="fw-light" style="font-size: 14px; color: #616768;">Tinggal masukin kesanggupan cicilan per
+                        bulan, langsung tahu harga rumah yang bisa dibeli. </p>
+                </div>
+                <div class="col-sm">
+                    <img src="/assets/customer-service.svg" alt="" style="height: 61px;">
+                    <p class="fw-semibold fs-5" style="margin-top: 25px;margin-bottom: 10px;">Cepat Responsnya</p>
+                    <p class="fw-light" style="font-size: 14px; color: #616768;">Mau tanya – tanya dulu, bisa chat
+                        langsung dengan pihak developernya.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container testimoni">
+            <h2 class="text-center">Testimoni</h2>
+            <div class="card-testimoni-wrapper" style="margin: 30px 0;">
+                <div class="card rounded-4">
+                    <div class="card-body">
+                        <img src="/assets/quote.svg" alt="">
+                        <p class="card-text fw-medium" style="font-size: 16px; margin-top: 8px; margin-bottom: 35px;">
+                            Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit, sed
+                            do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                            Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="/assets/image/testi-profile.png" alt="" style="width: 66px; height: 66px;">
+                            <div>
+                                <p class="fw-semibold text-uppercase" style="font-size: 14px; margin: 0;">miles</p>
+                                <p class="fw-light" style="font-size: 14px; color: #858E97; margin: 0;">@milesaja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-4">
+                    <div class="card-body">
+                        <img src="/assets/quote.svg" alt="">
+                        <p class="card-text fw-medium" style="font-size: 16px; margin-top: 8px; margin-bottom: 35px;">
+                            Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit, sed
+                            do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                            Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="/assets/image/testi-profile.png" alt="" style="width: 66px; height: 66px;">
+                            <div>
+                                <p class="fw-semibold text-uppercase" style="font-size: 14px; margin: 0;">miles</p>
+                                <p class="fw-light" style="font-size: 14px; color: #858E97; margin: 0;">@milesaja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-4">
+                    <div class="card-body">
+                        <img src="/assets/quote.svg" alt="">
+                        <p class="card-text fw-medium" style="font-size: 16px; margin-top: 8px; margin-bottom: 35px;">
+                            Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit, sed
+                            do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                            Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="/assets/image/testi-profile.png" alt="" style="width: 66px; height: 66px;">
+                            <div>
+                                <p class="fw-semibold text-uppercase" style="font-size: 14px; margin: 0;">miles</p>
+                                <p class="fw-light" style="font-size: 14px; color: #858E97; margin: 0;">@milesaja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-4">
+                    <div class="card-body">
+                        <img src="/assets/quote.svg" alt="">
+                        <p class="card-text fw-medium" style="font-size: 16px; margin-top: 8px; margin-bottom: 35px;">
+                            Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit, sed
+                            do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                            Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="/assets/image/testi-profile.png" alt="" style="width: 66px; height: 66px;">
+                            <div>
+                                <p class="fw-semibold text-uppercase" style="font-size: 14px; margin: 0;">miles</p>
+                                <p class="fw-light" style="font-size: 14px; color: #858E97; margin: 0;">@milesaja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mitra container">
+            <h5 class="text-uppercase text-center" style="font-size: 14px;">Mitra Developer</h5>
+            <div class="img-wrapper d-flex gap-5 justify-content-center" style="margin-top: 50px;">
+                <img src="/assets/developer-logo.png" alt="">
+                <img src="/assets/developer-logo.png" alt="">
+                <img src="/assets/developer-logo.png" alt="">
+                <img src="/assets/developer-logo.png" alt="">
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="recommend-title text-center">Berita Terbaru</h2>
+            <div class="news-wrapper" style="margin: 34px 0;">
+                <div class="news-card card rounded-2 border" style="max-width: 253px;">
+                    <img src="/assets/image/article-picture.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h6 class="card-title" style="color: #4EA59C;">Adipiscing elit, sed do eiusmod tempor incididunt
+                        </h6>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 500;">Cikeas
+                            15 April, 2022</p>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 400;">Cikeas
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+                <div class="news-card card rounded-2 border" style="max-width: 253px;">
+                    <img src="/assets/image/article-picture.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h6 class="card-title" style="color: #4EA59C;">Adipiscing elit, sed do eiusmod tempor incididunt
+                        </h6>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 500;">Cikeas
+                            15 April, 2022</p>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 400;">Cikeas
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+                <div class="news-card card rounded-2 border" style="max-width: 253px;">
+                    <img src="/assets/image/article-picture.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h6 class="card-title" style="color: #4EA59C;">Adipiscing elit, sed do eiusmod tempor incididunt
+                        </h6>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 500;">Cikeas
+                            15 April, 2022</p>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 400;">Cikeas
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+                <div class="news-card card rounded-2 border" style="max-width: 253px;">
+                    <img src="/assets/image/article-picture.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h6 class="card-title" style="color: #4EA59C;">Adipiscing elit, sed do eiusmod tempor incididunt
+                        </h6>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 500;">Cikeas
+                            15 April, 2022</p>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 400;">Cikeas
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+                <div class="news-card card rounded-2 border" style="max-width: 253px;">
+                    <img src="/assets/image/article-picture.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h6 class="card-title" style="color: #4EA59C;">Adipiscing elit, sed do eiusmod tempor incididunt
+                        </h6>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 500;">Cikeas
+                            15 April, 2022</p>
+                        <p class="card-text" style="color: #414042; font-size: 14px; font-weight: 400;">Cikeas
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer class="footer-mobile">
+        <section class="container">
+            <div class="row" style="margin-bottom: 55px;">
+                <div class="col text-center">
+                    <img src="/assets/secondary-logo.png" alt="">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center gap-5">
+                <div>
+                    <p class="text-white text-uppercase fw-semibold">Navigation</p>
+                    <nav>
+                        <ul class="navbar-nav d-flex flex-column gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Simulasi
+                                    KPR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Berita</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Ajak
+                                    Teman</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <p class="text-white text-uppercase fw-semibold">Others</p>
+                    <nav>
+                        <ul class="navbar-nav d-flex flex-column gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Developer
+                                    Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Mau
+                                    pasang iklan?</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 32px;">
+                <p class="text-white text-uppercase fw-semibold">Follow</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <img src="/assets/Shape.svg" alt="">
+                    <img src="/assets/Vector(1).svg" alt="">
+                    <img src="/assets/instagram.svg" alt="">
+                    <img src="/assets/Vector.svg" alt="">
+                </div>
+            </div>
+            <p class="text-white text-center fw-normal mx-auto"
+                style="margin-top: 42px; font-size: 12px; max-width: 236px;">Copyright © 2022
+                All
+                Rights Reserved. |
+                Terms of
+                Use | Privacy Policy </p>
+        </section>
+    </footer>
+    <footer class="footer-desktop">
+        <section class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="/assets/secondary-logo.png" alt="">
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Navigation</p>
+                            <nav>
+                                <ul class="navbar-nav d-flex flex-column gap-2">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Simulasi
+                                            KPR</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Berita</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Ajak
+                                            Teman</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Others</p>
+                            <nav>
+                                <ul class="navbar-nav d-flex flex-column gap-2">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Developer Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Contact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Mau
+                                            pasang iklan?</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Follow</p>
+                            <div class="d-flex gap-3">
+                                <img src="/assets/Shape.svg" alt="">
+                                <img src="/assets/Vector(1).svg" alt="">
+                                <img src="/assets/instagram.svg" alt="">
+                                <img src="/assets/Vector.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-white text-center fw-light" style="margin-top: 85px; font-size: 12px;">Copyright © 2022 All
+                Rights Reserved. |
+                Terms of
+                Use | Privacy Policy </p>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.banner-wrapper').slick({
+                arrows: true,
+            });
+
+            $('.recommend').slick({
+                dots: true,
+                infinite: false,
+                arrows: false,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            centerMode: true,
+                        }
+                    }
+                ]
+            });
+            $('.find-house-wrapper').slick({
+                arrows: true,
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            $('.card-testimoni-wrapper').slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                centerMode: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    }
+                ]
+            });
+
+            $('.news-wrapper').slick({
+                dots: true,
+                arrows: false,
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            centerMode: true,
+                        }
+                    }
+                ]
+            });
+
+        })
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        /* Fungsi untuk membuka sidenav */
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "320px";
+            document.getElementById("main").style.display = 'none';
+        }
+
+        /* Fungsi untuk menutup sidenav */
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginRight = "0";
+            document.getElementById("main").style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>

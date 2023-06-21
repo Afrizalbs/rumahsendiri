@@ -1,0 +1,232 @@
+@media (max-width: 576px) {
+  .navbar .container .nav-wrapper {
+    display: none !important;
+  }
+
+  #main {
+    display: block;
+  }
+
+  #mySidebar {
+    display: block;
+  }
+
+  /* Tambahkan CSS khusus untuk navbar */
+  .sidebar {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    background-color: #455b59;
+  }
+
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidebar .closebtn {
+    margin-top: 20px !important;
+    font-size: 20px !important;
+  }
+
+  .sidebar button {
+    display: block;
+    margin: 46px 30px;
+    width: 252px;
+  }
+
+  .sidebar a:hover {
+    color: #ffc000;
+  }
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  #main {
+    transition: margin-right 0.3s;
+    padding: 16px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+
+  #jumbotron {
+    background-image: url("./assets/image/bg-header-mobile.png");
+    max-height: 100vh;
+    padding-top: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #jumbotron h1 {
+    font-weight: 700;
+    max-width: 289px;
+  }
+
+  #jumbotron .jumbotron-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #414042;
+  }
+
+  .custom-group {
+    display: none !important;
+  }
+
+  .custom-group-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .custom-group-mobile select {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #c6e7e4;
+    font-size: 15px;
+    padding: 15px 24px;
+  }
+
+  .custom-group-mobile .input-group {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #c6e7e4;
+  }
+
+  .custom-group-mobile .input-group .custom-input {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 15px 24px;
+  }
+
+  .custom-group-mobile .input-group button {
+    padding: 15px 16px;
+    z-index: 1;
+  }
+
+  .banner-wrapper {
+    max-width: 360px;
+    margin-top: 0px !important;
+  }
+
+  .banner-wrapper div img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
+
+  .recommend-title {
+    font-weight: 600;
+  }
+
+  .recommend-subtitle {
+    max-width: 355px;
+    font-size: 15px;
+  }
+
+  .find-house-wrapper {
+    max-width: 360px;
+  }
+
+  .find-house-wrapper div img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
+
+  .kpr-simulation {
+    margin-top: 44px;
+    padding-bottom: 70px;
+  }
+
+  .kpr-simulation .row .col img {
+    width: 360px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+  }
+
+  .kpr-simulation .simulation-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+  }
+
+  .kpr-simulation .simulation-wrapper .dekstop-view {
+    display: none;
+  }
+
+  .kpr-simulation .simulation-wrapper .mobile-view {
+    display: block;
+  }
+
+  .payment {
+    display: flex;
+    gap: 37px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 23px;
+  }
+
+  .payment-method {
+    width: 153px;
+    padding: 19px 30px 0px 30px;
+    border: 2px solid white;
+  }
+  .payment-method:hover {
+    border: 2px solid #4ea59c;
+  }
+
+  .about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .mitra {
+    padding: 50px 0;
+  }
+
+  .mitra .img-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .mitra .img-wrapper img {
+    /* flex-direction: column; */
+    width: 150px;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
+
+  .footer-desktop {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: block;
+    margin-top: 62px;
+    background-color: #455b59;
+    padding-top: 65px;
+    padding-bottom: 77px;
+  }
+}

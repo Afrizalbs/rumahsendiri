@@ -127,7 +127,7 @@
   }
 
   .banner-wrapper {
-    max-width: 360px;
+    max-width: 320px;
     margin-top: 0px !important;
   }
 
@@ -147,7 +147,7 @@
   }
 
   .find-house-wrapper {
-    max-width: 360px;
+    max-width: 320px;
   }
 
   .find-house-wrapper div img {
@@ -162,7 +162,7 @@
   }
 
   .kpr-simulation .row .col img {
-    width: 360px;
+    width: 100%;
     aspect-ratio: 1/1;
     object-fit: contain;
   }

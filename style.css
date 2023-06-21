@@ -2,6 +2,10 @@
   font-family: "Poppins";
 }
 
+.navbar {
+  background-color: #fff;
+}
+
 .navbar .container .nav-wrapper > ul > li > a:hover {
   color: #20a79c !important;
   border-bottom: 2px solid #20a79c;
@@ -104,7 +108,9 @@
 
 .kpr-simulation {
   margin-top: 88px;
+  padding-top: 47px;
   padding-bottom: 135px;
+  background-color: #f4fffe;
 }
 
 .kpr-simulation .simulation-wrapper {

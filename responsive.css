@@ -203,6 +203,10 @@
     padding-bottom: 40px;
   }
 
+  .about .row .col-sm {
+    text-align: center;
+  }
+
   .mitra {
     padding: 50px 0;
   }

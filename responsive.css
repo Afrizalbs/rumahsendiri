@@ -183,14 +183,14 @@
 
   .payment {
     display: flex;
-    gap: 37px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 23px;
   }
 
   .payment-method {
-    width: 153px;
+    width: 140px;
     padding: 19px 30px 0px 30px;
     border: 2px solid white;
     background-color: white;
@@ -218,7 +218,7 @@
 
   .mitra .img-wrapper img {
     /* flex-direction: column; */
-    width: 150px;
+    width: 100px;
     aspect-ratio: 16/9;
     object-fit: contain;
   }

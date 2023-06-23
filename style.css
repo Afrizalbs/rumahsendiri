@@ -170,8 +170,14 @@ main {
   padding: 0 50px;
 }
 
-.kpr-simulation .simulation-wrapper .dekstop-view {
-  display: block;
+.kpr-simulation
+  .simulation-wrapper
+  .dekstop-view
+  .grid
+  .option-wrapper
+  .select-wrapper
+  .select-native {
+  display: none;
 }
 
 .kpr-simulation .simulation-wrapper .dekstop-view .grid {
@@ -185,10 +191,6 @@ main {
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
-}
-
-.custom-select .select-selected {
-  border-radius: 500px;
 }
 
 .payment {

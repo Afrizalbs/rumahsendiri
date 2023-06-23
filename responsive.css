@@ -192,11 +192,25 @@
     row-gap: 30px;
   }
 
-  .kpr-simulation .simulation-wrapper .dekstop-view-result .grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: none;
-    row-gap: 10px;
+  .kpr-simulation
+    .simulation-wrapper
+    .dekstop-view
+    .grid
+    .option-wrapper
+    .select-wrapper
+    .select-native {
+    display: flex;
+    padding: 20px 30px;
+  }
+
+  .kpr-simulation
+    .simulation-wrapper
+    .dekstop-view
+    .grid
+    .option-wrapper
+    .select-wrapper
+    .custom-select {
+    display: none;
   }
 
   .kpr-simulation .simulation-wrapper .dekstop-view-result .grid {

@@ -101,6 +101,12 @@ main {
   margin: 0 auto;
   max-width: 257px;
   aspect-ratio: 1/1;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.recommend .recommend-card img:hover {
+  transform: scale(1.1);
 }
 
 .slick-dots {
@@ -128,10 +134,22 @@ main {
   margin: 0 15px;
 }
 
-.find-house-wrapper div img {
+.find-house-wrapper .find-img-wrapper img {
   margin: 0 auto;
   width: 100%;
   aspect-ratio: 16/9;
+}
+
+.find-house-wrapper .find-img-wrapper {
+  position: relative;
+}
+
+.find-house-wrapper .find-img-wrapper .title-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: white;
+  font-weight: 600;
 }
 
 .kpr-simulation {
@@ -146,22 +164,25 @@ main {
   padding: 0 50px;
 }
 
+.kpr-simulation .simulation-wrapper .dekstop-view {
+  display: block;
+}
+
 .kpr-simulation .simulation-wrapper .dekstop-view .grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 30px;
 }
 
-.kpr-simulation .simulation-wrapper .dekstop-view {
-  display: block;
+.kpr-simulation .simulation-wrapper .dekstop-view-result .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
-.kpr-simulation .simulation-wrapper .mobile-view {
-  display: none;
-}
-
-.mobile-view-result {
-  display: none;
+.custom-select .select-selected {
+  border-radius: 500px;
 }
 
 .payment {
@@ -179,7 +200,26 @@ main {
   border: 2px solid white;
   background-color: white;
 }
+
 .payment-method:hover {
+  border: 2px solid #4ea59c;
+}
+
+/* HIDE RADIO */
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type="radio"] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type="radio"]:checked + .payment-method {
   border: 2px solid #4ea59c;
 }
 
@@ -187,6 +227,7 @@ main {
   border-radius: 500px;
   border-width: 2px;
   border-style: solid;
+  background-color: white;
   border-color: #dbdbdb;
 }
 

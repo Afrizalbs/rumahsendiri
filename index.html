@@ -494,10 +494,22 @@
 
             <h2 class="recommend-title text-center" style="margin-top: 100px;">Temukan rumah idaman di daerah Anda</h2>
             <div class="find-house-wrapper mx-auto my-5">
-                <div> <img src="/assets/image/cluster.png" alt=""> </div>
-                <div><img src="/assets/image/cluster.png" alt=""></div>
-                <div><img src="/assets/image/cluster.png" alt=""></div>
-                <div><img src="/assets/image/cluster.png" alt=""></div>
+                <div class="find-img-wrapper">
+                    <img src="/assets/image/cluster.png" alt="">
+                    <div class="title-left">Bogor</div>
+                </div>
+                <div class="find-img-wrapper">
+                    <img src="/assets/image/cluster.png" alt="">
+                    <div class="title-left">Genuk</div>
+                </div>
+                <div class="find-img-wrapper">
+                    <img src="/assets/image/cluster.png" alt="">
+                    <div class="title-left">Ungaran</div>
+                </div>
+                <div class="find-img-wrapper">
+                    <img src="/assets/image/cluster.png" alt="">
+                    <div class="title-left">Sembir</div>
+                </div>
             </div>
             <div class="mx-auto text-center" style="margin: 50px 0;">
                 <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
@@ -511,82 +523,82 @@
                     <div class="col">
                         <img src="/assets/image/kpr-illustration.png" alt="">
                     </div>
-                    <div class="mobile-view">
-                        <p style="font-size: 14px;">Kemampuan Angsuran per bulan</p>
-                        <input type="text" class="form-control rounded-pill border-1" placeholder="Rp."
-                            style="font-size: 15px; font-weight: 400;padding: 15px 30px;margin-bottom: 40px;">
-                        <p style="font-size: 14px;">Jangka waktu KPR</p>
-                        <select class="form-select form-select-lg rounded-pill fs-6 py-3 px-4">
-                            <option selected>1 Tahun</option>
-                            <option value="1">5 Tahun</option>
-                            <option value="2">10 Tahun</option>
-                            <option value="3">15 Tahun</option>
-                        </select>
-                        <p style="font-size: 14px; margin-top: 40px;">Pilih Bank dan suku bunganya</p>
-                        <div class="payment">
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p class="text-center" style="font-size: 12px; margin-top: 5px;">Bunga 5%</p>
-                            </div>
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p class="text-center" style="font-size: 12px; margin-top: 5px;">Bunga 5%</p>
-                            </div>
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p class="text-center" style="font-size: 12px; margin-top: 5px;">Bunga 5%</p>
-                            </div>
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p class="text-center" style="font-size: 12px; margin-top: 5px;">Bunga 5%</p>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
-                                style="padding: 16px 54px;">Hitung</button>
-                        </div>
-                    </div>
-                    <div class="dekstop-view col">
+                    <div class="dekstop-view col-sm">
                         <div class="grid">
-                            <p class="" style="font-size: 12px;">Kemampuan Angsuran per bulan</p>
-                            <p class="" style="font-size: 12px;">Jangka Waktu KPR</p>
-                            <input type="text" class=" form-control rounded-pill border-1" placeholder="Rp."
-                                style="font-size: 15px; font-weight: 400;padding: 15px 30px;">
-                            <select class="form-select form-select-lg rounded-pill fs-6 py-3 px-4">
+                            <div>
+                                <p class="" style="font-size: 12px;">Kemampuan Angsuran per bulan</p>
+                                <input type="text" class=" form-control rounded-pill border-1" placeholder="Rp."
+                                    style="font-size: 15px; font-weight: 400;padding: 20px 30px;">
+                            </div>
+                            <div>
+                                <p class="" style="font-size: 12px;">Jangka Waktu KPR</p>
+                                <div class="border rounded-pill">
+                                    <div class="custom-select">
+                                        <select class="fs-6">
+                                            <option selected>Pilih</option>
+                                            <option value="0">1 Tahun</option>
+                                            <option value="1">5 Tahun</option>
+                                            <option value="2">10 Tahun</option>
+                                            <option value="3">15 Tahun</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <select class="form-select form-select-lg rounded-pill fs-6 py-3 px-4">
                                 <option selected>1 Tahun</option>
                                 <option value="1">5 Tahun</option>
                                 <option value="2">10 Tahun</option>
                                 <option value="3">15 Tahun</option>
-                            </select>
+                            </select> -->
+
                         </div>
                         <div class="row" style="margin-top: 30px;">
                             <p class="col" style="font-size: 12px;">Pilih Bank dan suku bunganya</p>
                         </div>
                         <div class="payment">
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
-                            </div>
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
-                            </div>
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
-                            </div>
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
-                            </div>
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
-                            </div>
-                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
-                            </div>
+                            <label>
+                                <input type="radio" name="test" value="small">
+                                <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                    <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                    <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="test" value="small">
+                                <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                    <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                    <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="test" value="small">
+                                <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                    <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                    <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="test" value="small">
+                                <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                    <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                    <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="test" value="small">
+                                <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                    <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                    <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="test" value="small">
+                                <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                    <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                    <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                                </div>
+                            </label>
                         </div>
                         <div class="row" style="margin-top: 45px;">
                             <div class="col">
@@ -595,22 +607,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mobile-view-result">
-                        <p class="" style="font-size: 12px;">Kemampuan Angsuran per bulan</p>
-                        <p class="" style="font-size: 12px;">Jangka waktu KPR</p>
-                        <p class="" style="font-weight: 600; font-size: 18px;">Rp. 2.000.000,-</p>
-                        <p class="" style="font-weight: 600; font-size: 18px;">1 tahun</p>
-                        <div style="grid-column: span 2;">
-                            <p class="col" style="font-size: 12px;">Bank</p>
-                            <div class="col d-flex flex-column align-items-center justify-content-end">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                    <div class="dekstop-view-result col-sm" style="display: none;">
+                        <div class="grid">
+                            <div class="text-wrapper">
+                                <p class="" style="font-size: 12px;">Kemampuan Angsuran per bulan</p>
+                                <p class="" style="font-weight: 600; font-size: 18px;">Rp. 2.000.000,-</p>
+                            </div>
+                            <div class="text-wrapper">
+                                <p class="" style="font-size: 12px;">Jangka waktu KPR</p>
+                                <p class="" style="font-weight: 600; font-size: 18px;">1 tahun</p>
+                            </div>
+                            <div class="">
+                                <p class="" style="font-size: 12px;">Bank</p>
+                                <div
+                                    class="payment-method d-flex flex-column align-items-center justify-content-center rounded-4">
+                                    <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                    <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                                </div>
+                            </div>
+                            <div style="width: 100%;">
+                                <p class="" style="font-size: 12px;">Harga Properti Maksimal Anda</p>
+                                <input type="text" class=" rounded-4"
+                                    style="border-width: 2px; border: solid; border-color: #4EA59C;font-weight: 700; font-size: 30px; padding: 15px 30px; width: 100%;"
+                                    value="Rp. 3.000.000,-" readonly>
                             </div>
                         </div>
-                        <div style="grid-column: span 2;">
-                            <input type="text" class="rounded-4"
-                                style="border-width: 2px; border: solid; border-color: #4EA59C;font-weight: 700; font-size: 30px; padding: 20px 30px; width: 100%;"
-                                value="Rp. 3.000.000,-" readonly>
+                        <div class="row">
                             <p class="text-center fw-light" style="margin-top: 26px; font-size: 14px; color: #616768;">
                                 Anda dapat
                                 mencari secara langsung
@@ -618,50 +640,7 @@
                                 dengan harga maksimal di atas dengan
                                 memasukkan lokasi yang Anda inginkan</p>
                         </div>
-                        <div style="grid-column: span 2; width: 100%;">
-                            <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
-                                style="padding: 18px 34px; width: 100%;" onclick="displaySimulationCalcu()">Hitung
-                                Ulang</button>
-                        </div>
-                        <div class="rounded-pill" style="grid-column: span 2; background-color: white;">
-                            <div class="custom-group-simulation input-group">
-                                <input type="text" class="custom-input form-control rounded-start-pill border-0"
-                                    placeholder="Lokasi/Proyek"
-                                    style="font-size: 15px; font-weight: 400;padding: 18px 31px;">
-                                <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
-                                    style="padding: 18px 22px;">Cari</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dekstop-view-result col" style="display: none;">
-                        <div class="row">
-                            <p class="col" style="font-size: 12px;">Kemampuan Angsuran per bulan</p>
-                            <p class="col" style="font-size: 12px;">Jangka waktu KPR</p>
-                        </div>
-                        <div class="row">
-                            <p class="col" style="font-weight: 600; font-size: 18px;">Rp. 2.000.000,-</p>
-                            <p class="col" style="font-weight: 600; font-size: 18px;">1 tahun</p>
-                        </div>
-                        <div class="row" style="margin-top: 30px;">
-                            <p class="col" style="font-size: 12px;">Bank</p>
-                            <p class="col" style="font-size: 12px;">Harga Properti Maksimal Anda</p>
-                        </div>
-                        <div class="row">
-                            <div class="col d-flex flex-column align-items-center justify-content-end">
-                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
-                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
-                            </div>
-                            <input type="text" class="col rounded-4"
-                                style="border-width: 2px; border: solid; border-color: #4EA59C;font-weight: 700; font-size: 30px; padding: 20px 30px;"
-                                value="Rp. 3.000.000,-" readonly>
-                            <p class="text-center fw-light" style="margin-top: 26px; font-size: 14px; color: #616768;">
-                                Anda dapat
-                                mencari secara langsung
-                                properti
-                                dengan harga maksimal di atas dengan
-                                memasukkan lokasi yang Anda inginkan</p>
-                        </div>
-                        <div class="row" style="margin-top: 45px;">
+                        <div class="button-wrapper row" style="margin-top: 45px;">
                             <div class="col">
                                 <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
                                     style="padding: 18px 34px;" onclick="displaySimulationCalcu()">Hitung Ulang</button>

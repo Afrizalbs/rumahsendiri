@@ -150,10 +150,19 @@
     max-width: 320px;
   }
 
-  .find-house-wrapper div img {
+  .find-house-wrapper .find-img-wrapper img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: contain;
+  }
+
+  .find-house-wrapper .find-img-wrapper .title-left {
+    position: absolute;
+    bottom: 8px;
+    left: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   .kpr-simulation {
@@ -174,22 +183,52 @@
   }
 
   .kpr-simulation .simulation-wrapper .dekstop-view {
-    display: none;
-  }
-
-  .kpr-simulation .simulation-wrapper .dekstop-view-result {
-    display: none;
-  }
-
-  .kpr-simulation .simulation-wrapper .mobile-view {
     display: block;
   }
 
-  .mobile-view-result {
-    display: none;
-    grid-template-columns: 1.5fr 1fr;
+  .kpr-simulation .simulation-wrapper .dekstop-view .grid {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 30px;
+  }
+
+  .kpr-simulation .simulation-wrapper .dekstop-view-result .grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: none;
+    row-gap: 10px;
+  }
+
+  .kpr-simulation .simulation-wrapper .dekstop-view-result .grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: none;
     column-gap: 30px;
-    row-gap: 20px;
+    row-gap: 30px;
+  }
+
+  .kpr-simulation
+    .simulation-wrapper
+    .dekstop-view-result
+    .button-wrapper
+    .col
+    .btn {
+    width: 100%;
+  }
+
+  .kpr-simulation
+    .simulation-wrapper
+    .dekstop-view-result
+    .button-wrapper
+    .col-7 {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .payment {

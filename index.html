@@ -547,6 +547,55 @@
                         </div>
                     </div>
                     <div class="dekstop-view col">
+                        <div class="grid">
+                            <p class="" style="font-size: 12px;">Kemampuan Angsuran per bulan</p>
+                            <p class="" style="font-size: 12px;">Jangka Waktu KPR</p>
+                            <input type="text" class=" form-control rounded-pill border-1" placeholder="Rp."
+                                style="font-size: 15px; font-weight: 400;padding: 15px 30px;">
+                            <select class="form-select form-select-lg rounded-pill fs-6 py-3 px-4">
+                                <option selected>1 Tahun</option>
+                                <option value="1">5 Tahun</option>
+                                <option value="2">10 Tahun</option>
+                                <option value="3">15 Tahun</option>
+                            </select>
+                        </div>
+                        <div class="row" style="margin-top: 30px;">
+                            <p class="col" style="font-size: 12px;">Pilih Bank dan suku bunganya</p>
+                        </div>
+                        <div class="payment">
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                            </div>
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                            </div>
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                            </div>
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                            </div>
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                            </div>
+                            <div class="payment-method d-flex flex-column align-items-center rounded-4">
+                                <img src="/assets/bca.png" alt="" style="width: 95px; height: 30px;">
+                                <p style="font-size: 12px; margin-top: 10px;">Bunga 5%</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 45px;">
+                            <div class="col">
+                                <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
+                                    style="padding: 16px 54px;" onclick="displayResult()">Hitung</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dekstop-view-result col" style="display: none;">
                         <div class="row">
                             <p class="col" style="font-size: 12px;">Kemampuan Angsuran per bulan</p>
                             <p class="col" style="font-size: 12px;">Jangka waktu KPR</p>
@@ -577,7 +626,7 @@
                         <div class="row" style="margin-top: 45px;">
                             <div class="col">
                                 <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
-                                    style="padding: 18px 34px;">Hitung Ulang</button>
+                                    style="padding: 18px 34px;" onclick="displaySimulationCalcu()">Hitung Ulang</button>
                             </div>
                             <div class="col-7">
                                 <div class="custom-group-simulation input-group">
@@ -1012,6 +1061,8 @@
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 centerMode: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
                 responsive: [
                     {
                         breakpoint: 1024,
@@ -1097,6 +1148,20 @@
             let header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0)
         })
+
+        // Function menampilkan element simulasi KPR setelah klik hitung
+        const calculatorSimulationView = document.querySelector(".dekstop-view")
+        const simulation = document.querySelector(".dekstop-view-result")
+
+        function displayResult() {
+            simulation.style.display = 'block'
+            calculatorSimulationView.style.display = "none"
+        }
+
+        function displaySimulationCalcu() {
+            simulation.style.display = 'none'
+            calculatorSimulationView.style.display = "block"
+        }
     </script>
 
 </body>

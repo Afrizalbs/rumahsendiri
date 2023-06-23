@@ -146,12 +146,37 @@ main {
   padding: 0 50px;
 }
 
-.kpr-simulation .simulation-wrapper .desktop-view {
+.kpr-simulation .simulation-wrapper .dekstop-view .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 30px;
+}
+
+.kpr-simulation .simulation-wrapper .dekstop-view {
   display: block;
 }
 
 .kpr-simulation .simulation-wrapper .mobile-view {
   display: none;
+}
+
+.payment {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 23px;
+}
+
+.payment-method {
+  width: 153px;
+  padding: 19px 30px 0px 30px;
+  border: 2px solid white;
+  background-color: white;
+}
+.payment-method:hover {
+  border: 2px solid #4ea59c;
 }
 
 .custom-group-simulation {
@@ -181,8 +206,8 @@ main {
 }
 
 .card-testimoni-wrapper .card {
-  opacity: 0.5;
-  max-width: 524px;
+  opacity: 0.3;
+  max-width: 542px;
 }
 
 .card-testimoni-wrapper .slick-slide {

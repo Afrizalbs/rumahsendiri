@@ -160,6 +160,10 @@ main {
   display: none;
 }
 
+.mobile-view-result {
+  display: none;
+}
+
 .payment {
   display: flex;
   column-gap: 30px;
@@ -187,7 +191,7 @@ main {
 }
 
 .about {
-  padding-top: 140px;
+  padding-top: 100px;
   padding-bottom: 140px;
 }
 

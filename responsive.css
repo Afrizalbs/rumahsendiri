@@ -1,5 +1,5 @@
 @media (max-width: 576px) {
-  .navbar .container .nav-wrapper {
+  .nav-wrapper {
     display: none !important;
   }
 
@@ -80,21 +80,6 @@
 
   .offcanvas-body button {
     margin-top: 32px;
-  }
-
-  /* #main {
-    transition: margin-right 0.3s;
-    padding: 16px;
-  } */
-
-  @media screen and (max-height: 450px) {
-    .sidebar {
-      padding-top: 15px;
-    }
-
-    .sidebar a {
-      font-size: 18px;
-    }
   }
 
   #jumbotron {

@@ -4,7 +4,6 @@
 
 header {
   padding: 10px 0px;
-  margin-bottom: 14px;
   position: fixed;
   width: 100%;
   background-color: #fff;
@@ -29,11 +28,11 @@ header.sticky {
   fill: #20a79c;
 }
 
-#main {
+#mySidebar {
   display: none;
 }
 
-#mySidebar {
+#offcanvasRight {
   display: none;
 }
 

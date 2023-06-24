@@ -63,6 +63,8 @@
 
   .offcanvas-body {
     padding: 32px !important;
+    background-color: #455b59;
+    height: 100%;
   }
 
   .offcanvas-body a {

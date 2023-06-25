@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -192,8 +192,134 @@
                 </div>
                 <div class="container mx-auto d-flex align-items-center justify-content-end gap-2"
                     style="max-width: 791px;margin-top: 15px;">
-                    <p class="fw-light" style="margin: 0; font-size: 15px;">Pencarian lebih lanjut</p>
+                    <!-- Button trigger modal -->
+                    <a class="nav-link fw-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        style="margin: 0; font-size: 15px; cursor: pointer;">Pencarian lebih lanjut</a>
                     <img src="/assets/arrow-down.svg" alt="">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5">Search Filter</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="input-group">
+                                        <input type="text" class="input-group-modal form-control fs-6"
+                                            placeholder="Lokasi/Proyek" aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2">
+                                        <span class="input-group-text" id="basic-addon2"><i
+                                                class="fas fa-search"></i></span>
+                                    </div>
+                                    <hr class="modal-divider" />
+                                    <h6>Jenis</h6>
+                                    <div class="jenis-wrapper">
+                                        <label>
+                                            <input type="radio" name="jenis-radio" value="subsidi">
+                                            <div class="jenis-radio-modal rounded-pill">
+                                                Semua
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="jenis-radio" value="subsidi">
+                                            <div class="jenis-radio-modal rounded-pill">
+                                                Non Subsidi
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="jenis-radio" value="subsidi">
+                                            <div class="jenis-radio-modal rounded-pill">
+                                                Subsidi
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <hr class="modal-divider" />
+                                    <h6>Harga</h6>
+                                    <div class="harga-wrapper">
+                                        <label>
+                                            <input type="radio" name="harga-radio" value="subsidi">
+                                            <div class="harga-radio-modal rounded-pill">
+                                                Semua
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="harga-radio" value="subsidi">
+                                            <div class="harga-radio-modal rounded-pill">
+                                                < 200JT </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="harga-radio" value="subsidi">
+                                            <div class="harga-radio-modal rounded-pill">
+                                                201 - 400 JT
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="harga-radio" value="subsidi">
+                                            <div class="harga-radio-modal rounded-pill">
+                                                401 - 700 JT
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="harga-radio" value="subsidi">
+                                            <div class="harga-radio-modal rounded-pill">
+                                                > 700 JT
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <hr class="modal-divider" />
+                                    <h6>Stok</h6>
+                                    <div class="stok-wrapper">
+                                        <label>
+                                            <input type="radio" name="stok-radio" value="subsidi">
+                                            <div class="stok-radio-modal rounded-pill">
+                                                Semua
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="stok-radio" value="subsidi">
+                                            <div class="stok-radio-modal rounded-pill">
+                                                Siap Huni
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="stok-radio" value="subsidi">
+                                            <div class="stok-radio-modal rounded-pill">
+                                                Dalam Pembangunan
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <hr class="modal-divider" />
+                                    <h6>Tahun Selesai</h6>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tahun-selesai"
+                                            value="option1">
+                                        <label class="form-check-label">2023</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tahun-selesai"
+                                            value="option2">
+                                        <label class="form-check-label">2024</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tahun-selesai"
+                                            value="option2">
+                                        <label class="form-check-label">2025</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tahun-selesai"
+                                            value="option2">
+                                        <label class="form-check-label">2026</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="modal-save-button btn rounded-pill">Terapkan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

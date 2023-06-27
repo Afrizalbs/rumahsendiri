@@ -93,7 +93,7 @@ main {
 }
 
 #jumbotron {
-  background-image: url("./assets/image/bg-header.png");
+  background-image: url("../assets/image/bg-header.png");
   max-width: 1394px;
   height: 590px;
   padding-top: 132px;

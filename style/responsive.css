@@ -85,7 +85,7 @@
   }
 
   #jumbotron {
-    background-image: url("./assets/image/bg-header-mobile.png");
+    background-image: url("../assets/image/bg-header-mobile.png");
     max-height: 100vh;
     padding-top: 32px;
     background-repeat: no-repeat;

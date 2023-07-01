@@ -1,0 +1,388 @@
+main {
+  position: relative;
+  padding-top: 104px;
+}
+
+.detail-image-wrapper {
+  max-height: 100vh;
+  background-color: #e1f5f3;
+  transition: 0.5s ease;
+  /* background-color: #3eb2a6; */
+}
+
+.map-wrapper {
+  overflow: hidden;
+  display: none;
+  aspect-ratio: 16/9;
+  max-height: 500px;
+  width: 100%;
+}
+
+#map {
+  aspect-ratio: 16/9;
+  max-height: 500px;
+  width: 100%;
+}
+
+.large-image-wrapper {
+  /* background-color: antiquewhite; */
+  max-height: 500px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.large-image {
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: fill;
+  max-height: 500px;
+}
+
+.bottom-navigation-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 23px 30px;
+  column-gap: 55px;
+}
+
+.nav-image-wrapper {
+  height: 80px;
+  width: 75% !important;
+}
+
+.small-image {
+  aspect-ratio: 16/9;
+  width: 142px !important;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.small-image + .slick-slide {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.nav-image-wrapper .slick-list {
+  margin: 0 24px !important;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  height: 36px;
+  margin-top: -8px;
+  line-height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-next {
+  right: 0;
+}
+
+.slider-prev {
+  left: 0;
+}
+
+.maps-btn-wrapper {
+  display: block;
+  width: 25%;
+}
+
+.goto-maps-btn {
+  max-height: 58px;
+  width: 100%;
+  padding: 16px 30px !important;
+  border-radius: 50px !important;
+  background: #ffc000 !important;
+}
+
+.picture-btn-wrapper {
+  display: none;
+  width: 25%;
+}
+
+.goto-picture-btn {
+  width: 100%;
+  max-height: 58px;
+  padding: 16px 30px !important;
+  border-radius: 50px !important;
+  background: #20a79c !important;
+  color: white !important;
+}
+
+.info-proyek {
+  margin-top: 55px;
+}
+
+.breadcrumb-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.data-proyek {
+  margin-top: 46px;
+}
+
+.detail-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.list-group-item p {
+  margin-bottom: 0;
+}
+
+.btn-detail-data {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+}
+
+.btn-call {
+  background-color: #ffc000 !important;
+  padding: 16px 54px !important;
+  max-height: 55px !important;
+}
+
+.detail-brochure {
+  margin-top: 40px;
+}
+
+.detail-nav {
+  background: #455b59;
+  height: 67px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.custom-link-style {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.active {
+  color: #ffc000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.deskripsi-keunggulan {
+  color: #616768;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.type-wrapper {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 30px;
+  padding: 0 70px;
+}
+
+.type-card {
+  max-width: 253px;
+}
+
+.card-body {
+  background-color: #fff;
+}
+
+.price-text {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.unit-text {
+  color: #616768;
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.unit-text span {
+  color: #4ea59c;
+  font-weight: 700;
+}
+
+.favorite-icon {
+  color: #20a79c;
+  cursor: pointer;
+}
+
+.facility-wrapper {
+  display: flex;
+  column-gap: 45px;
+}
+
+.facility-image-wrapper {
+  aspect-ratio: 16/9;
+  width: 50%;
+}
+
+.facility-image {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.slick-dots {
+  margin-top: 20px !important;
+  list-style-type: none;
+  /* background-color: #4ea59c; */
+}
+
+.facility-image-wrapper .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #dadada;
+  text-indent: -9999px;
+}
+
+.facility-image-wrapper .slick-dots .slick-active button {
+  background-color: #4ea59c;
+}
+
+.list-wrapper {
+  background-color: #fff;
+  width: 100%;
+  display: grid;
+  /* flex-wrap: wrap; */
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2% 0;
+  /* column-gap: 40px; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  align-content: start;
+  justify-items: center;
+}
+
+.review-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+}
+
+.number-rated {
+  color: #4ea59c;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.progress-wrapper {
+  display: grid;
+  grid-template-columns: 15% 60% 5%;
+  align-items: center;
+  gap: 20px;
+}
+
+.progress-bar {
+  background-color: #4ea59c !important;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-review-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.form-star-review {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.lokasi-label {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #616768;
+  cursor: pointer;
+}
+
+.lokasi-rating label input[type="radio"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+[type="radio"]:checked + .lokasi-label {
+  color: white;
+  background-color: #4ea59c;
+}
+
+.fasilitas-label {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #616768;
+  cursor: pointer;
+}
+
+.fasilitas-rating label input[type="radio"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+[type="radio"]:checked + .fasilitas-label {
+  color: white;
+  background-color: #4ea59c;
+}
+
+.kualitas-label {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #616768;
+  cursor: pointer;
+}
+
+.kualitas-rating label input[type="radio"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+[type="radio"]:checked + .kualitas-label {
+  color: white;
+  background-color: #4ea59c;
+}

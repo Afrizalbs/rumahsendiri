@@ -1,0 +1,177 @@
+* {
+  font-family: "Poppins";
+}
+
+header {
+  padding: 22px 0px;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.4s ease;
+  z-index: 9999;
+  top: 0;
+  height: 104px;
+}
+
+.header-content {
+  /* padding: 0 !important; */
+  max-height: 104px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.sticky {
+  padding: 10px 0px;
+  height: 80px;
+}
+
+.main-logo {
+  height: 58px;
+  width: 189px;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  transition: 0.4s ease;
+}
+
+.main-logo.sticky {
+  width: 154px;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.nav-account {
+  display: flex;
+  column-gap: 20px;
+  justify-content: flex-end;
+  padding: 0px 16px;
+}
+
+.nav-wrapper > ul > li > a:hover {
+  color: #20a79c !important;
+  border-bottom: 2px solid #20a79c;
+}
+
+.nav-wrapper > ul > li > a {
+  border-bottom: 2px solid #fff;
+}
+
+.nav-wrapper .nav-account > li > div > a:hover {
+  color: #20a79c !important;
+}
+
+.nav-wrapper .nav-account > li > a:hover {
+  color: #20a79c !important;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-menu {
+  border: 2px solid #4ea59c !important;
+  margin-top: 10px !important;
+}
+
+#mySidebar {
+  display: none;
+}
+
+#offcanvasRight {
+  display: none;
+}
+
+/* responsive */
+@media (max-width: 576px) {
+  .nav-wrapper {
+    display: none !important;
+  }
+
+  #mySidebar {
+    display: block;
+  }
+
+  /* Tambahkan CSS khusus untuk navbar */
+  #offcanvasRight {
+    background-color: #455b59;
+    display: block;
+    z-index: 9999;
+  }
+
+  .offcanvas-header {
+    /* justify-content: end !important; */
+    background-color: #20a79c;
+    align-items: start !important;
+  }
+
+  .login-view {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .login-view h4 {
+    text-align: center;
+  }
+
+  .login-divider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid #fff;
+  }
+
+  .login-menu {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .login-menu a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .login-menu .collapse {
+    padding: 0 40px;
+  }
+
+  .login-menu .collapse a {
+    font-size: 16px;
+  }
+
+  .offcanvas-body {
+    padding: 32px !important;
+    background-color: #455b59;
+    height: 100%;
+  }
+
+  .offcanvas-body a {
+    padding: 8px 0;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .offcanvas-body a:hover {
+    color: #ffc000;
+  }
+
+  .offcanvas-body button {
+    margin-top: 32px;
+  }
+}

@@ -106,6 +106,8 @@
 
   .login-page-wrapper {
     background-image: none;
+    align-items: start;
+    padding-top: 60px;
   }
 
   .error-wrapper {

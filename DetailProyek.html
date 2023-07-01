@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek</title>
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/detailproyek.css">
+    <link rel="stylesheet" href="style/detailproyekresponsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="style/star-rating-svg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+        integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
+        integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-content">
+                <a class="navbar-brand" href="#">
+                    <img class="main-logo" src="/assets/main-logo.png" alt="rumah sederhana">
+                </a>
+                <!-- sidebar -->
+                <div id="mySidebar">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"><img src="/assets/menu.svg" alt=""></button>
+                </div>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <div class="login-view">
+                            <h4>Hi, Donny Sianturi</h4>
+                            <hr class="login-divider">
+                            <div class="login-menu">
+                                <a class="account" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="fa-regular fa-user fa-sm"></i>Akun Saya
+                                </a>
+                                <div class="collapse" id="collapseExample">
+                                    <a href="#">Account Settings</a>
+                                    <a href="#">My Booking</a>
+                                </div>
+                                <a href="#"><i class="fa-regular fa-heart fa-sm"></i>Favorite</a>
+                                <a href="#"><i class="fa-regular fa-object-group fa-sm"></i>Bandingkan</a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="#">Home</a>
+                        <a href="#">Simulasi KPR</a>
+                        <a href="#">Berita</a>
+                        <a href="#">Ajak Teman</a>
+                        <button class="btn btn-warning py-3 px-5 rounded-pill fw-medium" type="button"
+                            id="button-addon1">
+                            <img src="/assets/login.svg" alt=""> Login
+                        </button>
+                        <button class="invisible btn btn-outline-danger py-3 px-5 rounded-pill fw-medium" type="button"
+                            id="button-addon1">
+                            Sign Out
+                        </button>
+                    </div>
+                </div>
+                <!-- end sidebar -->
+                <div class="nav-wrapper">
+                    <div class="nav-account" style="font-weight: 400; font-size: 12px;">
+                        <li class=" d-flex column-gap-2">
+                            <img src="/assets/login.svg" alt="" style="width: 16px;">
+                            <div class="dropdown-center">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Login
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Account Setting</a></li>
+                                    <li><a class="dropdown-item" href="#">My Booking</a></li>
+                                    <li><a class="dropdown-item text-danger" href="#">Sign Out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d-flex column-gap-2">
+                            <img src="/assets/favorite.svg" alt="">
+                            <a class="nav-link text-black" href="#">Favorite</a>
+                        </li>
+                        <li class="d-flex column-gap-2">
+                            <img src="/assets/compare.svg" alt="">
+                            <a class="nav-link text-black" href="#">Bandingkan</a>
+                        </li>
+                    </div>
+                    <ul class="nav d-flex gap-5 justify-content-end"
+                        style="font-family: 'Poppins'; font-weight: 500; font-size: 15px;">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Simulasi KPR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Berita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Ajak Teman</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="detail-image-wrapper rounded-top-4 rounded-bottom-4">
+            <div class="map-wrapper rounded-4">
+                <div id="map"></div>
+            </div>
+            <div class="large-image-wrapper rounded-4">
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+            </div>
+            <div class="bottom-navigation-wrapper">
+                <div class="nav-image-wrapper">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                </div>
+                <div class="maps-btn-wrapper">
+                    <button class="goto-maps-btn btn ">
+                        <i class="fas fa-map-marked-alt" style="margin-right: 5px;"></i>
+                        lihat lokasi peta
+                    </button>
+                </div>
+                <div class="picture-btn-wrapper">
+                    <button class="goto-picture-btn btn ">
+                        <i class="fas fa-image" style="margin-right: 5px;"></i>
+                        lihat Gambar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="info-proyek">
+            <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="nav-link" href="index.html">home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">kencana mas</li>
+                </ol>
+            </nav>
+            <h1 class="text-center fw-semibold">Kencana Mas Residence</h1>
+            <p class="text-center text-secondary">Bogor Jawa Barat</p>
+
+            <div class="data-proyek">
+                <h5 class="fw-semibold">Info Proyek</h5>
+                <div class="detail-data">
+                    <div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <p class="fw-semibold">Developer</p>
+                                <p class="text-secondary">Sumarecon</p>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <p class="fw-semibold">Perijinan</p>
+                                <a class="nav-link text-info" href="#">Lihat</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <p class="fw-semibold">Status Proyek</p>
+                                <p class="text-secondary">Subsidi</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <p class="fw-semibold">Tipe Properti</p>
+                                <p class="text-secondary">Rumah Tapak</p>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <p class="fw-semibold">Alamat</p>
+                                <p class="text-secondary">Jl. Sadewa Bogor, Jawa Barat</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-detail-data">
+                        <button class="btn-call btn rounded-pill fw-semibold">Call</button>
+                        <button class="btn-call btn rounded-pill fw-semibold">Whatsapp</button>
+                        <a class="fw-medium text-info" href="#">Download Brochure</a>
+                        <a class="fw-medium text-info" href="#">Download Pricelist</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="detail-brochure">
+            <div id="navbar-detail" class="detail-nav">
+                <ul class="nav flex-grow-1 justify-content-around">
+                    <li class="nav-item">
+                        <a class="custom-link-style" href="#keunggulan">Keunggulan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="custom-link-style" href="#tipe">Tipe Properti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="custom-link-style" href="#fasilitas">Fasilitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="custom-link-style" href="#ulasan">Ulasan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="custom-link-style" href="#tulis-ulasan">Tulis Ulasan</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-detail" class="scrollspy-example" data-bs-offset="50">
+                <h4 class="mt-5" id="keunggulan">Keunggulan</h4>
+                <p class="deskripsi-keunggulan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                    vestibulum non quam sit amet sodales.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque
+                    ut
+                    purus sed velit varius luctus sit amet vel ante. Nullam semper velit a justo malesuada feugiat.
+                    Maecenas
+                    tempus, turpis quis consectetur condimentum, sapien leo aliquet tortor, ut hendrerit odio nulla et
+                    arcu.
+                    In pharetra ullamcorper orci sed pellentesque. Donec vulputate pharetra libero, et ullamcorper
+                    tellus
+                    fermentum sollicitudin. Nullam in laoreet lorem. Nam malesuada porttitor rutrum. Aenean scelerisque
+                    nulla metus, vitae luctus mi lobortis eu. Vivamus massa velit, malesuada in sem nec, hendrerit
+                    venenatis
+                    sapien.</p>
+                <h4 class="mt-5" id="tipe">Tipe Properti</h4>
+                <div class="type-wrapper">
+                    <div class="type-card card rounded-4 border-0">
+                        <div class="img-header rounded-4">
+                            <img src="/assets/image/type.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <p class="price-text card-text">Rp. 140.000.000,-</p>
+                                    <p class="unit-text">Sisa <span>10 Unit</span></p>
+                                </div>
+                                <div class="favorite-icon"><i onclick="toggleFavorite(this)"
+                                        class="far fa-heart fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-3">
+                                <div class="text-center">
+                                    <p class="mb-0">LT</p>
+                                    <p class="mb-0 text-secondary fw-semibold">60m2</p>
+                                </div>
+                                <div class="text-center">
+                                    <p class="mb-0">LB</p>
+                                    <p class="mb-0 text-secondary fw-semibold">60m2</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="assets/bed-ic.svg" alt="">
+                                    <p class="mb-0 text-secondary fw-semibold">2</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="assets/shower-ic.svg" alt="">
+                                    <p class="mb-0 text-secondary fw-semibold">2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="mt-5" id="fasilitas">Fasilitas</h4>
+                <div class="facility-wrapper">
+                    <div class="facility-image-wrapper rounded-4">
+                        <div>
+                            <img class="facility-image rounded-4" src="assets/image/fasilitas.png" alt="">
+                        </div>
+                        <div>
+                            <img class="facility-image rounded-4" src="assets/image/proyek-image.png" alt="">
+                        </div>
+                        <div>
+                            <img class="facility-image rounded-4" src="assets/image/fasilitas.png" alt="">
+                        </div>
+                    </div>
+                    <div class="list-wrapper">
+                        <div class="list-facility d-flex align-items-center gap-2">
+                            <i class="fas fa-check fa-sm" style="color: #4EA59C;"></i>
+                            <p class="mb-0 text-secondary">Jalur Telepon</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="review-section">
+                    <div>
+                        <h4 class="mt-5 " id="ulasan">Ulasan</h4>
+                        <div class="summary-review mt-5 d-flex column-gap-5 align-items-center">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="my-rating"></div>
+                                <div class="d-flex gap-2 mt-2 align-items-center">
+                                    <p class="number-rated mb-0">4.8</p>
+                                    <p class="fw-semibold fs-6 mb-0">out of 5</p>
+                                </div>
+                                <p class="text-secondary text-center" style="max-width: 94px;">based on 123 reviews</p>
+                            </div>
+                            <div class="review-statistic flex-grow-1">
+                                <div class="progress-wrapper">
+                                    <p class="text-uppercase text-secondary mb-0">Lokasi</p>
+                                    <div class="progress" role="progressbar" aria-label="Example 1px high"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                                        style="height: 5px; width: 100%;">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                    <p class="text-uppercase text-secondary mb-0">4.8</p>
+                                </div>
+                                <div class="progress-wrapper">
+                                    <p class="text-uppercase text-secondary mb-0">Fasilitas</p>
+                                    <div class="progress" role="progressbar" aria-label="Example 1px high"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                                        style="height: 5px; width: 100%;">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                    <p class="text-uppercase text-secondary mb-0">4.8</p>
+                                </div>
+                                <div class="progress-wrapper">
+                                    <p class="text-uppercase text-secondary mb-0">Kualitas</p>
+                                    <div class="progress" role="progressbar" aria-label="Example 1px high"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                                        style="height: 5px; width: 100%;">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                    <p class="text-uppercase text-secondary mb-0">4.8</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-review-wrapper mb-5">
+                            <div
+                                class="card-review card border-2 border-bottom border-top-0 border-start-0 border-end-0  pb-4">
+                                <div class="card-body d-flex column-gap-4">
+                                    <div class="profile">
+                                        <img src="assets/image/testi-profile.png" alt="" width="73">
+                                        <p class="profile-name mb-0">Jhon Doe</p>
+                                    </div>
+                                    <div class="detail-review">
+                                        <h6 class="fw-semibold mb-0">Nulla eleifend arcu ac eleifend pharetra.</h6>
+                                        <div class="review-rating"></div>
+                                        <p class="mb-0 text-secondary fw-light mt-2" style="font-size: 14px;">Lorem
+                                            ipsum dolor sit
+                                            amet,
+                                            consectetur
+                                            adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                            facilisis. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="mt-5" id="tulis-ulasan">Tulis Ulasan</h4>
+                        <div class="form-ulasan mt-5">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1"
+                                    class="form-label text-capitalize text-secondary fw-light">judul</label>
+                                <input type="text" class="form-control rounded-pill" id="exampleFormControlInput1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1"
+                                    class="form-label text-capitalize text-secondary fw-light">komentar</label>
+                                <textarea class="form-control rounded-4" id="exampleFormControlTextarea1"
+                                    rows="5"></textarea>
+                            </div>
+                            <div class="form-star-review">
+                                <div>
+                                    <p class="fw-bold mb-0">Lokasi</p>
+                                    <div class="lokasi-rating">
+                                        <label>
+                                            <input type="radio" name="lokasi-radio" value="1">
+                                            <div class="lokasi-label rounded-circle">
+                                                1
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="lokasi-radio" value="2">
+                                            <div class="lokasi-label rounded-circle">
+                                                2
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="lokasi-radio" value="3">
+                                            <div class="lokasi-label rounded-circle">
+                                                3
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="lokasi-radio" value="4">
+                                            <div class="lokasi-label rounded-circle">
+                                                4
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="lokasi-radio" value="5">
+                                            <div class="lokasi-label rounded-circle">
+                                                5
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mb-0">Fasilitas</p>
+                                    <div class="fasilitas-rating">
+                                        <label>
+                                            <input type="radio" name="fasilitas-radio" value="1">
+                                            <div class="fasilitas-label rounded-circle">
+                                                1
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="fasilitas-radio" value="2">
+                                            <div class="fasilitas-label rounded-circle">
+                                                2
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="fasilitas-radio" value="3">
+                                            <div class="fasilitas-label rounded-circle">
+                                                3
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="fasilitas-radio" value="4">
+                                            <div class="fasilitas-label rounded-circle">
+                                                4
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="fasilitas-radio" value="5">
+                                            <div class="fasilitas-label rounded-circle">
+                                                5
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mb-0">Kualitas</p>
+                                    <div class="kualitas-rating">
+                                        <label>
+                                            <input type="radio" name="kualitas" value="1">
+                                            <div class="kualitas-label rounded-circle">
+                                                1
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="kualitas" value="2">
+                                            <div class="kualitas-label rounded-circle">
+                                                2
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="kualitas" value="3">
+                                            <div class="kualitas-label rounded-circle">
+                                                3
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="kualitas" value="4">
+                                            <div class="kualitas-label rounded-circle">
+                                                4
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="kualitas" value="5">
+                                            <div class="kualitas-label rounded-circle">
+                                                5
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning rounded-pill py-3 px-5 mt-5">Kirim</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-mobile">
+        <section class="container">
+            <div class="row" style="margin-bottom: 55px;">
+                <div class="col text-center">
+                    <img src="/assets/secondary-logo.png" alt="">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center gap-5">
+                <div>
+                    <p class="text-white text-uppercase fw-semibold">Navigation</p>
+                    <nav>
+                        <ul class="navbar-nav d-flex flex-column gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Simulasi
+                                    KPR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Berita</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Ajak
+                                    Teman</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <p class="text-white text-uppercase fw-semibold">Others</p>
+                    <nav>
+                        <ul class="navbar-nav d-flex flex-column gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Developer
+                                    Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Mau
+                                    pasang iklan?</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 32px;">
+                <p class="text-white text-uppercase fw-semibold">Follow</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="" class="social-media-img">
+                        <i class="fa-brands fa-youtube fa-xl"></i>
+                    </a>
+                    <a href="" class="social-media-img">
+                        <i class="fa-brands fa-tiktok fa-xl"></i>
+                    </a>
+                    <a href="" class="social-media-img">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="" class="social-media-img">
+                        <i class="fa-brands fa-facebook-f fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <a class="copyright-link text-center fw-normal mx-auto"
+                style="margin-top: 42px; font-size: 12px; max-width: 236px;">Copyright © 2022
+                All
+                Rights Reserved. |
+                Terms of
+                Use | Privacy Policy </a>
+        </section>
+    </footer>
+    <footer class="footer-desktop">
+        <section class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="/assets/secondary-logo.png" alt="">
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Navigation</p>
+                            <nav>
+                                <ul class="navbar-nav d-flex flex-column gap-2">
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Simulasi
+                                            KPR</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Berita</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Ajak
+                                            Teman</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Others</p>
+                            <nav>
+                                <ul class="navbar-nav d-flex flex-column gap-2">
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Developer Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Contact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Mau
+                                            pasang iklan?</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Follow</p>
+                            <div class="d-flex gap-3">
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-youtube fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-tiktok fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-instagram fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-facebook-f fa-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="copyright-link  text-center fw-light mx-auto" href="#">Copyright © 2022
+                All
+                Rights Reserved. |
+                Terms of
+                Use | Privacy Policy </a>
+        </section>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="jquery.star-rating-svg.js"></script>
+    <script>
+        // Sticky Navbar
+        window.addEventListener("scroll", function () {
+            let header = document.querySelector("header");
+            let mainLogo = document.querySelector(".main-logo")
+            header.classList.toggle("sticky", window.scrollY > 0)
+            mainLogo.classList.toggle("sticky", window.scrollY > 0)
+        })
+
+        // Function menampilkan slick
+        $(document).ready(function () {
+            $('.large-image-wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.nav-image-wrapper',
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: false,
+                            infinite: false,
+                            dots: true
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+            $('.nav-image-wrapper').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                dots: false,
+                arrows: true,
+                centerMode: true,
+                focusOnSelect: true,
+                asNavFor: '.large-image-wrapper',
+                nextArrow: '<i class="slider-arrow slider-next fas fa-chevron-right"></i>',
+                prevArrow: '<i class="slider-arrow slider-prev fas fa-chevron-left"></i>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: false,
+                            focusOnSelect: true,
+                            infinite: false,
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+            $(".facility-image-wrapper").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false
+            })
+        })
+
+
+        // Fungsi tombol menampilkan lokasi peta
+        $(document).ready(function () {
+            // handle map and slider view
+            $(".goto-maps-btn").click(function () {
+                $(".large-image-wrapper").css("display", "none")
+                $(".maps-btn-wrapper").css("display", "none")
+                $(".map-wrapper").css("display", "block")
+                $(".picture-btn-wrapper").css("display", "block")
+                $(".nav-image-wrapper").css("opacity", 0);
+                // $(".nav-image-wrapper").fadeToggle();
+            })
+
+            $(".goto-picture-btn").click(function () {
+                $(".large-image-wrapper").css("display", "block")
+                $(".maps-btn-wrapper").css("display", "block")
+                $(".map-wrapper").css("display", "none")
+                $(".picture-btn-wrapper").css("display", "none")
+                $(".nav-image-wrapper").css("opacity", 1);
+                // $(".nav-image-wrapper").fadeToggle();
+            })
+        })
+
+        // map
+        const map = L.map('map').setView([-7.3305234, 110.5084366], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        map.scrollWheelZoom.disable()
+
+        setInterval(function () {
+            map.invalidateSize();
+        }, 100);
+
+        // toggle favorite
+        function toggleFavorite(data) {
+            // console.log(data.classList.toggle("fas"));
+            data.classList.toggle("fas");
+        }
+
+        // Function rating
+        $(document).ready(function () {
+            $(".my-rating").starRating({
+                initialRating: 4,
+                starSize: 20,
+                useFullStars: true,
+                readOnly: true,
+                ratedColor: '#E97D60'
+            });
+
+            $(".review-rating").starRating({
+                initialRating: 4,
+                starSize: 20,
+                useFullStars: true,
+                activeColor: '#E97D60',
+                readOnly: true
+            });
+        })
+
+        // Looping card tipe rumah
+        $(document).ready(function () {
+            // Sample array
+            let dataArray = [1, 2, 3, 4, 5, 6, 7, 8];
+
+            // Get the original element
+            let originalElement = $(".type-card");
+
+            // Get the number of times you want to duplicate the element
+            let numDuplicates = dataArray.length;
+
+            // Loop through the array length and duplicate the element
+            for (let i = 1; i < numDuplicates; i++) {
+                // Use clone() method to duplicate the element
+                let clonedElement = originalElement.clone();
+
+                // Append the cloned element to the desired container (e.g., body or another div)
+                $(".type-wrapper").append(clonedElement);
+            }
+        });
+
+        // Looping list fasilitas
+        $(document).ready(function () {
+            // Sample array
+            let dataArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+            // Get the original element
+            let originalElement = $(".list-facility");
+
+            // Get the number of times you want to duplicate the element
+            let numDuplicates = dataArray.length;
+
+            // Loop through the array length and duplicate the element
+            for (let i = 1; i < numDuplicates; i++) {
+                // Use clone() method to duplicate the element
+                let clonedElement = originalElement.clone();
+
+                // Append the cloned element to the desired container (e.g., body or another div)
+                $(".list-wrapper").append(clonedElement);
+            }
+        });
+
+        // Looping review
+        $(document).ready(function () {
+            // Sample array
+            const dataArray = [1, 2, 3];
+
+            // Get the original element
+            const originalElement = $(".card-review");
+
+            // Get the number of times you want to duplicate the element
+            const numDuplicates = dataArray.length;
+
+            // Loop through the array length and duplicate the element
+            for (let i = 1; i < numDuplicates; i++) {
+                // Use clone() method to duplicate the element
+                let clonedElement = originalElement.clone();
+
+                // Append the cloned element to the desired container (e.g., body or another div)
+                $(".card-review-wrapper").append(clonedElement);
+            }
+        });
+    </script>
+</body>
+
+</html>

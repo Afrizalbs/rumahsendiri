@@ -490,7 +490,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-warning rounded-pill py-3 px-5 mt-5">Kirim</button>
+                            <button class="send-review btn btn-warning rounded-pill py-3 px-5 mt-5">Kirim</button>
                         </div>
                     </div>
                 </section>
@@ -666,12 +666,13 @@
     <script type="text/javascript" src="jquery.star-rating-svg.js"></script>
     <script>
         // Sticky Navbar
-        window.addEventListener("scroll", function () {
-            let header = document.querySelector("header");
-            let mainLogo = document.querySelector(".main-logo")
-            header.classList.toggle("sticky", window.scrollY > 0)
-            mainLogo.classList.toggle("sticky", window.scrollY > 0)
-        })
+        $(window).scroll(function () {
+            let header = $("header");
+            let mainLogo = $(".main-logo");
+            header.toggleClass("sticky", $(window).scrollTop() > 0);
+            mainLogo.toggleClass("sticky", $(window).scrollTop() > 0);
+        });
+
 
         // Function menampilkan slick
         $(document).ready(function () {
@@ -753,36 +754,42 @@
         // Fungsi tombol menampilkan lokasi peta
         $(document).ready(function () {
             // handle map and slider view
-            $(".goto-maps-btn").click(function () {
-                $(".large-image-wrapper").css("display", "none")
-                $(".maps-btn-wrapper").css("display", "none")
-                $(".map-wrapper").css("display", "block")
-                $(".picture-btn-wrapper").css("display", "block")
+            $(".goto-maps-btn").click(() => {
+                $(".large-image-wrapper, .maps-btn-wrapper").css("display", "none");
+                $(".map-wrapper, .picture-btn-wrapper").css("display", "block");
                 $(".nav-image-wrapper").css("opacity", 0);
-                // $(".nav-image-wrapper").fadeToggle();
-            })
+            });
 
-            $(".goto-picture-btn").click(function () {
-                $(".large-image-wrapper").css("display", "block")
-                $(".maps-btn-wrapper").css("display", "block")
-                $(".map-wrapper").css("display", "none")
-                $(".picture-btn-wrapper").css("display", "none")
+            $(".goto-picture-btn").click(() => {
+                $(".large-image-wrapper, .maps-btn-wrapper").css("display", "block");
+                $(".map-wrapper, .picture-btn-wrapper").css("display", "none");
                 $(".nav-image-wrapper").css("opacity", 1);
-                // $(".nav-image-wrapper").fadeToggle();
-            })
-        })
+            });
+        });
+
 
         // map
-        const map = L.map('map').setView([-7.3305234, 110.5084366], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        map.scrollWheelZoom.disable()
+        $(document).ready(function () {
+            // Initialize the map
+            const map = L.map('map').setView([-7.3305234, 110.5084366], 13);
 
-        setInterval(function () {
-            map.invalidateSize();
-        }, 100);
+            // Add tile layer from OpenStreetMap
+            const tileLayerUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+            const tileLayerOptions = {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            };
+            L.tileLayer(tileLayerUrl, tileLayerOptions).addTo(map);
+
+            // Disable scroll wheel zooming
+            map.scrollWheelZoom.disable();
+
+            // Update map size every 100 milliseconds
+            setInterval(function () {
+                map.invalidateSize();
+            }, 100);
+        });
+
 
         // toggle favorite
         function toggleFavorite(data) {
@@ -811,66 +818,98 @@
 
         // Looping card tipe rumah
         $(document).ready(function () {
-            // Sample array
-            let dataArray = [1, 2, 3, 4, 5, 6, 7, 8];
+            const dataArray = [1, 2, 3, 4, 5, 6, 7, 8];
+            const originalElement = $(".type-card");
+            const container = $(".type-wrapper")
 
-            // Get the original element
-            let originalElement = $(".type-card");
-
-            // Get the number of times you want to duplicate the element
-            let numDuplicates = dataArray.length;
-
-            // Loop through the array length and duplicate the element
-            for (let i = 1; i < numDuplicates; i++) {
-                // Use clone() method to duplicate the element
-                let clonedElement = originalElement.clone();
-
-                // Append the cloned element to the desired container (e.g., body or another div)
-                $(".type-wrapper").append(clonedElement);
-            }
+            dataArray.forEach(function (item, index) {
+                if (index > 0) {
+                    let clonedElement = originalElement.clone();
+                    container.append(clonedElement);
+                }
+            });
         });
+
 
         // Looping list fasilitas
         $(document).ready(function () {
-            // Sample array
-            let dataArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+            const dataArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+            const originalElement = $(".list-facility");
+            const container = $(".list-wrapper")
 
-            // Get the original element
-            let originalElement = $(".list-facility");
-
-            // Get the number of times you want to duplicate the element
-            let numDuplicates = dataArray.length;
-
-            // Loop through the array length and duplicate the element
-            for (let i = 1; i < numDuplicates; i++) {
-                // Use clone() method to duplicate the element
-                let clonedElement = originalElement.clone();
-
-                // Append the cloned element to the desired container (e.g., body or another div)
-                $(".list-wrapper").append(clonedElement);
-            }
+            dataArray.forEach(function (item, index) {
+                if (index > 0) {
+                    let clonedElement = originalElement.clone();
+                    container.append(clonedElement);
+                }
+            });
         });
 
         // Looping review
         $(document).ready(function () {
-            // Sample array
             const dataArray = [1, 2, 3];
-
-            // Get the original element
             const originalElement = $(".card-review");
+            const container = $(".card-review-wrapper")
 
-            // Get the number of times you want to duplicate the element
-            const numDuplicates = dataArray.length;
-
-            // Loop through the array length and duplicate the element
-            for (let i = 1; i < numDuplicates; i++) {
-                // Use clone() method to duplicate the element
-                let clonedElement = originalElement.clone();
-
-                // Append the cloned element to the desired container (e.g., body or another div)
-                $(".card-review-wrapper").append(clonedElement);
-            }
+            dataArray.forEach(function (item, index) {
+                if (index > 0) {
+                    let clonedElement = originalElement.clone();
+                    container.append(clonedElement);
+                }
+            });
         });
+
+        // Fungsi kirim data ulasan
+        $(document).ready(function () {
+            // Event listener untuk tombol "Kirim"
+            $('.send-review').click(function () {
+                // Ambil nilai dari input dan textarea
+                let judul = $('#exampleFormControlInput1').val();
+                let komentar = $('#exampleFormControlTextarea1').val();
+
+                // Ambil nilai dari radio button untuk setiap kategori rating
+                let lokasiRating = $('input[name="lokasi-radio"]:checked').val();
+                let fasilitasRating = $('input[name="fasilitas-radio"]:checked').val();
+                let kualitasRating = $('input[name="kualitas"]:checked').val();
+
+                // Lakukan validasi apakah semua input telah diisi
+                if (judul !== '' && komentar !== '' && lokasiRating && fasilitasRating && kualitasRating) {
+                    // Buat objek data yang akan dikirim
+                    let ulasanData = {
+                        judul: judul,
+                        komentar: komentar,
+                        lokasiRating: lokasiRating,
+                        fasilitasRating: fasilitasRating,
+                        kualitasRating: kualitasRating
+                    };
+
+                    // Kirim data ulasan ke server (contoh: menggunakan AJAX)
+                    $.ajax({
+                        url: 'proses-ulasan.php', // Ganti dengan URL tujuan pengiriman data
+                        type: 'POST',
+                        data: ulasanData,
+                        success: function (response) {
+                            // Berhasil mengirim ulasan
+                            alert('Ulasan berhasil dikirim');
+                            // Reset nilai input dan radio button
+                            $('#exampleFormControlInput1').val('');
+                            $('#exampleFormControlTextarea1').val('');
+                            $('input[name="lokasi-radio"]').prop('checked', false);
+                            $('input[name="fasilitas-radio"]').prop('checked', false);
+                            $('input[name="kualitas"]').prop('checked', false);
+                        },
+                        error: function (xhr, status, error) {
+                            // Terjadi kesalahan dalam mengirim ulasan
+                            alert('Terjadi kesalahan saat mengirim ulasan');
+                        }
+                    });
+                } else {
+                    // Jika ada input yang kosong
+                    alert('Harap lengkapi semua kolom');
+                }
+            });
+        });
+
     </script>
 </body>
 

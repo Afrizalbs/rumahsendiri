@@ -161,6 +161,9 @@ main {
   display: flex;
   align-items: center;
   border-radius: 15px;
+  position: sticky;
+  top: 80px;
+  z-index: 99;
 }
 
 .custom-link-style {

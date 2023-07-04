@@ -1,0 +1,130 @@
+@media (orientation: portrait) {
+  .bottom-navigation-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    row-gap: 55px;
+  }
+
+  .large-image-wrapper {
+    overflow: visible;
+  }
+
+  .large-image-wrapper .slick-dots {
+    margin-bottom: 20px !important;
+  }
+
+  .large-image-wrapper .slick-dots li button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: #dadada;
+    text-indent: -9999px;
+  }
+
+  .large-image-wrapper .slick-dots .slick-active button {
+    background-color: #4ea59c;
+  }
+
+  .nav-image-wrapper {
+    /* width: 75% !important;
+        height: 100%; */
+    display: none !important;
+  }
+
+  .maps-btn-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .picture-btn-wrapper {
+    display: none;
+    width: 100%;
+  }
+
+  .title-proyek {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .breadcrumb-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mini-spec-wrapper {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .price-title-text {
+    border-right: none;
+    padding-right: 0px;
+  }
+
+  .price-title-text p {
+    text-align: center;
+  }
+
+  .mini-spec-wrapper .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .detail-data {
+    display: grid;
+    grid-template-columns: none;
+    row-gap: 20px;
+  }
+
+  .image-denah {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+
+  .title-denah {
+    width: 100%;
+    margin-top: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .select-location-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .lokasi-house {
+    flex-flow: column wrap;
+    gap: 10px;
+    max-height: 70vh;
+  }
+
+  .btn-select-unit {
+    width: 100%;
+  }
+
+  .input-kpr-wrapper {
+    grid-template-columns: none;
+    gap: 20px;
+  }
+
+  .select-bank-wrapper {
+    flex-flow: row wrap;
+  }
+
+  .form-check {
+    padding-left: 0 !important;
+  }
+
+  .btn-ajukan-kpr {
+    width: 100%;
+  }
+}

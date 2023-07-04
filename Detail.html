@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/detail.css">
+    <link rel="stylesheet" href="style/detailresponsive.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="style/star-rating-svg.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+        integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
+        integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-content">
+                <a class="navbar-brand" href="#">
+                    <img class="main-logo" src="/assets/main-logo.png" alt="rumah sederhana">
+                </a>
+                <!-- sidebar -->
+                <div id="mySidebar">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"><img src="/assets/menu.svg" alt=""></button>
+                </div>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <div class="login-view">
+                            <h4>Hi, Donny Sianturi</h4>
+                            <hr class="login-divider">
+                            <div class="login-menu">
+                                <a class="account" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="fa-regular fa-user fa-sm"></i>Akun Saya
+                                </a>
+                                <div class="collapse" id="collapseExample">
+                                    <a href="#">Account Settings</a>
+                                    <a href="#">My Booking</a>
+                                </div>
+                                <a href="#"><i class="fa-regular fa-heart fa-sm"></i>Favorite</a>
+                                <a href="#"><i class="fa-regular fa-object-group fa-sm"></i>Bandingkan</a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="#">Home</a>
+                        <a href="#">Simulasi KPR</a>
+                        <a href="#">Berita</a>
+                        <a href="#">Ajak Teman</a>
+                        <button class="btn btn-warning py-3 px-5 rounded-pill fw-medium" type="button"
+                            id="button-addon1">
+                            <img src="/assets/login.svg" alt=""> Login
+                        </button>
+                        <button class="invisible btn btn-outline-danger py-3 px-5 rounded-pill fw-medium" type="button"
+                            id="button-addon1">
+                            Sign Out
+                        </button>
+                    </div>
+                </div>
+                <!-- end sidebar -->
+                <div class="nav-wrapper">
+                    <div class="nav-account" style="font-weight: 400; font-size: 12px;">
+                        <li class=" d-flex column-gap-2">
+                            <img src="/assets/login.svg" alt="" style="width: 16px;">
+                            <div class="dropdown-center">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Login
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Account Setting</a></li>
+                                    <li><a class="dropdown-item" href="#">My Booking</a></li>
+                                    <li><a class="dropdown-item text-danger" href="#">Sign Out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d-flex column-gap-2">
+                            <img src="/assets/favorite.svg" alt="">
+                            <a class="nav-link text-black" href="#">Favorite</a>
+                        </li>
+                        <li class="d-flex column-gap-2">
+                            <img src="/assets/compare.svg" alt="">
+                            <a class="nav-link text-black" href="#">Bandingkan</a>
+                        </li>
+                    </div>
+                    <ul class="nav d-flex gap-5 justify-content-end"
+                        style="font-family: 'Poppins'; font-weight: 500; font-size: 15px;">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Simulasi KPR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Berita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Ajak Teman</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="detail-image-wrapper rounded-top-4 rounded-bottom-4">
+            <div class="map-wrapper rounded-4">
+                <div id="map"></div>
+            </div>
+            <div class="large-image-wrapper rounded-4">
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+                <div><img class="large-image rounded-4" src="assets/image/proyek-image.png" alt="proyek-image"></div>
+            </div>
+            <div class="bottom-navigation-wrapper">
+                <div class="nav-image-wrapper">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                    <img class="small-image" src="assets/image/proyek-image.png" alt="small-proyek-image">
+                </div>
+                <div class="maps-btn-wrapper">
+                    <button class="goto-maps-btn btn ">
+                        <i class="fas fa-map-marked-alt" style="margin-right: 5px;"></i>
+                        lihat lokasi peta
+                    </button>
+                </div>
+                <div class="picture-btn-wrapper">
+                    <button class="goto-picture-btn btn ">
+                        <i class="fas fa-image" style="margin-right: 5px;"></i>
+                        lihat Gambar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="title-proyek">
+            <div>
+                <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="nav-link" href="index.html">home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">kencana mas</li>
+                        <li class="breadcrumb-item active" aria-current="page">Tipe 36</li>
+                    </ol>
+                </nav>
+                <h3 class="fw-semibold">Kencana Mas Residence</h3>
+                <p class="text-secondary fw-semibold mb-0">Bogor Jawa Barat. Sisa
+                    <span style="color: #4EA59C;">10 Unit</span>
+                </p>
+            </div>
+            <div class="mini-spec-wrapper d-flex gap-3">
+                <div class="price-title-text">
+                    <p class=" mb-0">Harga</p>
+                    <p class="mb-0 fw-bold fs-5 ">Rp.140.000.000,-</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center gap-4">
+                    <div class="text-center">
+                        <p class="mb-0">LT</p>
+                        <p class="mb-0 text-secondary fw-semibold">60m2</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="mb-0">LB</p>
+                        <p class="mb-0 text-secondary fw-semibold">60m2</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/bed-ic.svg" alt="">
+                        <p class="mb-0 text-secondary fw-semibold">2</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/shower-ic.svg" alt="">
+                        <p class="mb-0 text-secondary fw-semibold">2</p>
+                    </div>
+                    <div class="favorite-icon">
+                        <i onclick="toggleFavorite(this)" class="far fa-heart fa-lg"></i>
+                    </div>
+                    <button class="btn-compare btn rounded-pill">Bandingkan</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="spesification-proyek">
+            <h3>Spesifikasi</h3>
+            <div class="detail-data">
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Cluster/Tower</p>
+                            <p class="text-secondary mb-0">Taman Melati</p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Blok/Lantai</p>
+                            <p class="text-secondary mb-0">A4</p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Alamat</p>
+                            <p class="text-secondary text-end mb-0">Jl. Sadewa Bogor, Jawa Barat</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Tipe Properti</p>
+                            <p class="text-secondary mb-0">Rumah Tapak</p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Daya Listrik</p>
+                            <p class="text-secondary mb-0">1.300 W</p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Jalur PDAM</p>
+                            <p class="text-secondary mb-0">Ada</p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Jalur Telepon</p>
+                            <p class="text-secondary mb-0">Ada</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Sertifikasi Unit</p>
+                            <p class="text-secondary mb-0">SHGB</p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Status Properti</p>
+                            <p class="text-secondary mb-0">Non Subsidi</p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <p class="fw-semibold mb-0">Tipe</p>
+                            <p class="text-secondary mb-0">36</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="denah-proyek">
+            <h3 class="text-center fw-semibold">Denah Lokasi</h3>
+            <div class="d-flex flex-column align-items-center mt-5">
+                <img class="image-denah" src="assets/image/denah.png" alt="denah">
+                <div class="title-denah  d-flex justify-content-between border-bottom border-2">
+                    <p class="fs-5 fw-semibold mb-0">Pilih Rumah Anda</p>
+                    <div class="d-flex gap-2">
+                        <div class="d-flex gap-2">
+                            <div class="available-circle rounded-circle"></div>
+                            <p>Tersedia (10 Unit)</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <div class="sell-circle rounded-circle"></div>
+                            <p>Terjual (10 Unit)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-location-wrapper">
+                    <div class="lokasi-house mt-3">
+                        <p class="mb-0">A</p>
+                        <label>
+                            <input type="radio" name="house-radio" value="1">
+                            <div class="house-label rounded-circle">
+                                1
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1" disabled>
+                            <div class="house-label rounded-circle">
+                                2
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1" disabled>
+                            <div class="house-label rounded-circle">
+                                3
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1" disabled>
+                            <div class="house-label rounded-circle">
+                                4
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1" disabled>
+                            <div class="house-label rounded-circle">
+                                5
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1">
+                            <div class="house-label rounded-circle">
+                                6
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1">
+                            <div class="house-label rounded-circle">
+                                7
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1" disabled>
+                            <div class="house-label rounded-circle">
+                                8
+                            </div>
+                        </label>
+                    </div>
+                    <div class="lokasi-house mt-3">
+                        <p class="mb-0">B</p>
+                        <label>
+                            <input type="radio" name="house-radio" value="1">
+                            <div class="house-label rounded-circle">
+                                1
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1" disabled>
+                            <div class="house-label rounded-circle">
+                                2
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1">
+                            <div class="house-label rounded-circle">
+                                3
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1">
+                            <div class="house-label rounded-circle">
+                                4
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1" disabled>
+                            <div class="house-label rounded-circle">
+                                5
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1">
+                            <div class="house-label rounded-circle">
+                                6
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1">
+                            <div class="house-label rounded-circle">
+                                7
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="house-radio" value="1" disabled>
+                            <div class="house-label rounded-circle">
+                                8
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn-select-unit btn mt-4 rounded-pill">Pilih Unit</button>
+            </div>
+        </section>
+
+        <section class="kpr-calculation mt-5">
+            <h3 class="text-center fw-semibold">Perhitungan KPR</h3>
+            <div class="input-kpr-wrapper mt-5">
+                <div>
+                    <p class="">Harga Properti</p>
+                    <p id="property-price" class="fw-semibold fs-5 mb-0">Rp.140.000.000,-</p>
+                </div>
+                <div>
+                    <label for="AngsuranFormControl" class="form-label text-capitalize">Kemampuan Angsuran per
+                        bulan</label>
+                    <input type="number" class="form-control rounded-pill px-3 py-2 border-2" id="AngsuranFormControl"
+                        placeholder="Rp.">
+                </div>
+                <div class="">
+                    <label class="form-label text-capitalize">Jangka waktu KPR</label>
+                    <select class="select-kpr-year form-select rounded-pill px-3 py-2 border-2">
+                        <option value="0" selected>1 Tahun</option>
+                        <option value="1">5 Tahun</option>
+                        <option value="2">10 Tahun</option>
+                        <option value="3">15 Tahun</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="btn-calculate-kpr btn rounded-pill fw-semibold">Hitung</button>
+                </div>
+            </div>
+            <div class="select-bank-wrapper d-flex gap-5 justify-content-center mt-5">
+                <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" name="select-bank-kpr">
+                    <div class="form-check-label text-center">
+                        <i class="icon-checkbox fas fa-check"></i>
+                        <img src="assets/bca.png" alt="bank-logo">
+                        <p class="mb-0">Suku Bunga: <span class="fw-semibold" style="color: #4EA59C;">5%</span></p>
+                        <p class="mb-0">Angsuran perbulan:</p>
+                        <p class="fw-semibold fs-5 mb-0" style="color: #4EA59C;">Rp. 300.000,-</p>
+                    </div>
+                </label>
+                <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" name="select-bank-kpr">
+                    <div class="form-check-label text-center">
+                        <i class="icon-checkbox fas fa-check"></i>
+                        <img src="assets/bca.png" alt="bank-logo">
+                        <p class="mb-0">Suku Bunga: <span class="fw-semibold" style="color: #4EA59C;">5%</span></p>
+                        <p class="mb-0">Angsuran perbulan:</p>
+                        <p class="fw-semibold fs-5 mb-0" style="color: #4EA59C;">Rp. 300.000,-</p>
+                    </div>
+                </label>
+                <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" name="select-bank-kpr">
+                    <div class="form-check-label text-center">
+                        <i class="icon-checkbox fas fa-check"></i>
+                        <img src="assets/bca.png" alt="bank-logo">
+                        <p class="mb-0">Suku Bunga: <span class="fw-semibold" style="color: #4EA59C;">5%</span></p>
+                        <p class="mb-0">Angsuran perbulan:</p>
+                        <p class="fw-semibold fs-5 mb-0" style="color: #4EA59C;">Rp. 300.000,-</p>
+                    </div>
+                </label>
+                <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" name="select-bank-kpr">
+                    <div class="form-check-label text-center">
+                        <i class="icon-checkbox fas fa-check"></i>
+                        <img src="assets/bca.png" alt="bank-logo">
+                        <p class="mb-0">Suku Bunga: <span class="fw-semibold" style="color: #4EA59C;">5%</span></p>
+                        <p class="mb-0">Angsuran perbulan:</p>
+                        <p class="fw-semibold fs-5 mb-0" style="color: #4EA59C;">Rp. 300.000,-</p>
+                    </div>
+                </label>
+            </div>
+            <div class="mt-5 text-center">
+                <button class="btn-ajukan-kpr btn rounded-pill fw-semibold">Ajukan KPR</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-mobile">
+        <section class="container">
+            <div class="row" style="margin-bottom: 55px;">
+                <div class="col text-center">
+                    <img src="/assets/secondary-logo.png" alt="">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center gap-5">
+                <div>
+                    <p class="text-white text-uppercase fw-semibold">Navigation</p>
+                    <nav>
+                        <ul class="navbar-nav d-flex flex-column gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Simulasi
+                                    KPR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Berita</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Ajak
+                                    Teman</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <p class="text-white text-uppercase fw-semibold">Others</p>
+                    <nav>
+                        <ul class="navbar-nav d-flex flex-column gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Developer
+                                    Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Mau
+                                    pasang iklan?</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 32px;">
+                <p class="text-white text-uppercase fw-semibold">Follow</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="" class="social-media-img">
+                        <i class="fa-brands fa-youtube fa-xl"></i>
+                    </a>
+                    <a href="" class="social-media-img">
+                        <i class="fa-brands fa-tiktok fa-xl"></i>
+                    </a>
+                    <a href="" class="social-media-img">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="" class="social-media-img">
+                        <i class="fa-brands fa-facebook-f fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <a class="copyright-link text-center fw-normal mx-auto"
+                style="margin-top: 42px; font-size: 12px; max-width: 236px;">Copyright © 2022
+                All
+                Rights Reserved. |
+                Terms of
+                Use | Privacy Policy </a>
+        </section>
+    </footer>
+    <footer class="footer-desktop">
+        <section class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="/assets/secondary-logo.png" alt="">
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Navigation</p>
+                            <nav>
+                                <ul class="navbar-nav d-flex flex-column gap-2">
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Simulasi
+                                            KPR</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Berita</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Ajak
+                                            Teman</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Others</p>
+                            <nav>
+                                <ul class="navbar-nav d-flex flex-column gap-2">
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Developer Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Contact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                            href="#">Mau
+                                            pasang iklan?</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <p class="text-white text-uppercase fw-medium">Follow</p>
+                            <div class="d-flex gap-3">
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-youtube fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-tiktok fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-instagram fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-facebook-f fa-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="copyright-link  text-center fw-light mx-auto" href="#">Copyright © 2022
+                All
+                Rights Reserved. |
+                Terms of
+                Use | Privacy Policy </a>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="jquery.star-rating-svg.js"></script>
+    <script>
+        // Sticky Navbar
+        $(window).scroll(function () {
+            let header = $("header");
+            let mainLogo = $(".main-logo");
+            header.toggleClass("sticky", $(window).scrollTop() > 0);
+            mainLogo.toggleClass("sticky", $(window).scrollTop() > 0);
+        });
+
+
+        // Function menampilkan slick
+        $(document).ready(function () {
+            $('.large-image-wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.nav-image-wrapper',
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: false,
+                            infinite: false,
+                            dots: true
+                        }
+                    }
+                ]
+            });
+            $('.nav-image-wrapper').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                dots: false,
+                arrows: true,
+                centerMode: true,
+                focusOnSelect: true,
+                asNavFor: '.large-image-wrapper',
+                nextArrow: '<i class="slider-arrow slider-next fas fa-chevron-right"></i>',
+                prevArrow: '<i class="slider-arrow slider-prev fas fa-chevron-left"></i>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: false,
+                            focusOnSelect: true,
+                            infinite: false,
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+            $(".facility-image-wrapper").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false
+            })
+        })
+
+
+        // Fungsi tombol menampilkan lokasi peta
+        $(document).ready(function () {
+            // handle map and slider view
+            $(".goto-maps-btn").click(() => {
+                $(".large-image-wrapper, .maps-btn-wrapper").css("display", "none");
+                $(".map-wrapper, .picture-btn-wrapper").css("display", "block");
+                $(".nav-image-wrapper").css("opacity", 0);
+            });
+
+            $(".goto-picture-btn").click(() => {
+                $(".large-image-wrapper, .maps-btn-wrapper").css("display", "block");
+                $(".map-wrapper, .picture-btn-wrapper").css("display", "none");
+                $(".nav-image-wrapper").css("opacity", 1);
+            });
+        });
+
+
+        // map
+        $(document).ready(function () {
+            // Initialize the map
+            const map = L.map('map').setView([-7.3305234, 110.5084366], 13);
+
+            // Add tile layer from OpenStreetMap
+            const tileLayerUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+            const tileLayerOptions = {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            };
+            L.tileLayer(tileLayerUrl, tileLayerOptions).addTo(map);
+
+            // Disable scroll wheel zooming
+            map.scrollWheelZoom.disable();
+
+            // Update map size every 100 milliseconds
+            setInterval(function () {
+                map.invalidateSize();
+            }, 100);
+        });
+
+
+        // toggle favorite
+        function toggleFavorite(data) {
+            // console.log(data.classList.toggle("fas"));
+            data.classList.toggle("fas");
+        }
+
+        // Looping card tipe rumah
+        $(document).ready(function () {
+            const dataArray = [1, 2, 3, 4, 5, 6, 7, 8];
+            const originalElement = $(".type-card");
+            const container = $(".type-wrapper")
+
+            dataArray.forEach(function (item, index) {
+                if (index > 0) {
+                    let clonedElement = originalElement.clone();
+                    container.append(clonedElement);
+                }
+            });
+        });
+
+        // Fungsi kirim data kalkulasi kpr
+        $(document).ready(function () {
+            let propertyPriceElement = $('#property-price');
+            let angsuranInput = $('#AngsuranFormControl');
+            let jangkaWaktuSelect = $('.select-kpr-year');
+            let calculateButton = $('.btn-calculate-kpr');
+
+            function hitungKPR() {
+                let propertyPrice = parseInt(propertyPriceElement.text().replace(/[^0-9]/g, ''));
+                let angsuranPerBulan = parseInt(angsuranInput.val().replace(/[^0-9]/g, ''));
+                let jangkaWaktu = parseInt(jangkaWaktuSelect.val());
+
+                if (isNaN(propertyPrice) || isNaN(angsuranPerBulan) || isNaN(jangkaWaktu)) {
+                    alert('Masukkan angka yang valid untuk menghitung KPR!');
+                    return;
+                }
+
+                alert('Angsuran KPR per bulan: Rp. 3.000.000');
+            }
+
+            calculateButton.on('click', function () {
+                hitungKPR();
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -183,10 +183,21 @@ main {
   background-color: #c6e7e4;
 }
 
+.letter-location {
+  width: 48px;
+  height: 48px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .lokasi-house {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-top: 20px;
 }
 
 .house-label {

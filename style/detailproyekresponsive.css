@@ -65,6 +65,10 @@
     row-gap: 30px;
   }
 
+  .btn-detail-data {
+    gap: 20px;
+  }
+
   .detail-nav {
     display: none;
   }

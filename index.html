@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="style/select.css">
+    <link rel="stylesheet" href="style/button.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,17 +45,17 @@
                                     <i class="fa-regular fa-user fa-sm"></i>Akun Saya
                                 </a>
                                 <div class="collapse" id="collapseExample">
-                                    <a href="#">Account Settings</a>
-                                    <a href="#">My Booking</a>
+                                    <a href="Profile.html">Account Settings</a>
+                                    <a href="MyBooking.html">My Booking</a>
                                 </div>
-                                <a href="#"><i class="fa-regular fa-heart fa-sm"></i>Favorite</a>
-                                <a href="#"><i class="fa-regular fa-object-group fa-sm"></i>Bandingkan</a>
+                                <a href="Favorite.html"><i class="fa-regular fa-heart fa-sm"></i>Favorite</a>
+                                <a href="Compare.html"><i class="fa-regular fa-object-group fa-sm"></i>Bandingkan</a>
                             </div>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <a href="#">Home</a>
+                        <a href="index.html">Home</a>
                         <a href="#">Simulasi KPR</a>
                         <a href="#">Berita</a>
                         <a href="#">Ajak Teman</a>
@@ -79,25 +80,25 @@
                                     Login
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Account Setting</a></li>
-                                    <li><a class="dropdown-item" href="#">My Booking</a></li>
+                                    <li><a class="dropdown-item" href="Profile.html">Account Setting</a></li>
+                                    <li><a class="dropdown-item" href="MyBooking.html">My Booking</a></li>
                                     <li><a class="dropdown-item text-danger" href="#">Sign Out</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="d-flex column-gap-2">
                             <img src="/assets/favorite.svg" alt="">
-                            <a class="nav-link text-black" href="#">Favorite</a>
+                            <a class="nav-link text-black" href="Favorite.html">Favorite</a>
                         </li>
                         <li class="d-flex column-gap-2">
                             <img src="/assets/compare.svg" alt="">
-                            <a class="nav-link text-black" href="#">Bandingkan</a>
+                            <a class="nav-link text-black" href="Compare.html">Bandingkan</a>
                         </li>
                     </div>
                     <ul class="nav d-flex gap-5 justify-content-end"
                         style="font-family: 'Poppins'; font-weight: 500; font-size: 15px;">
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="#">Home</a>
+                            <a class="nav-link text-black" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-black" href="#">Simulasi KPR</a>
@@ -186,7 +187,7 @@
                         </div>
                     </div>
                     <div class="rounded-end-pill" style="background-color: white;">
-                        <button class="btn btn-warning py-3 px-5 rounded-pill" type="button"
+                        <button class="btn btn-yellow py-3 px-5 rounded-pill" type="button"
                             style="height: 100%;">CARI</button>
                     </div>
                 </div>
@@ -315,7 +316,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="modal-save-button btn rounded-pill">Terapkan</button>
+                                    <button type="button"
+                                        class="modal-save-button btn-yellow btn rounded-pill">Terapkan</button>
                                 </div>
                             </div>
                         </div>
@@ -714,9 +716,9 @@
                 </div>
             </div>
             <div class="mx-auto text-center" style="margin: 50px 0;">
-                <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
-                    style="padding: 16px 54px;">Gunakan
-                    Peta</button>
+                <button type="button" class="btn btn-yellow rounded-pill shadow-lg fw-semibold">
+                    Gunakan Peta
+                </button>
             </div>
 
             <section class="kpr-simulation container rounded-2">
@@ -811,8 +813,8 @@
                         </div>
                         <div class="row" style="margin-top: 45px;">
                             <div class="col">
-                                <button type="button" class="btn btn-warning rounded-pill shadow-lg fw-semibold"
-                                    style="padding: 16px 54px;" onclick="displayResult()">Hitung</button>
+                                <button type="button" class="btn btn-yellow rounded-pill shadow-lg fw-semibold"
+                                    onclick="displayResult()">Hitung</button>
                             </div>
                         </div>
                     </div>

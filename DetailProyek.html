@@ -208,7 +208,8 @@
                 </div>
             </div>
         </section>
-        <section class="detail-brochure">
+        <section class="detail-brochure position-relative" data-bs-spy="scroll" data-bs-target="#navbar-detail"
+            class="scrollspy-example" data-bs-offset="0">
             <div id="navbar-detail" class="detail-nav">
                 <ul class="nav flex-grow-1 justify-content-around">
                     <li class="nav-item">
@@ -228,81 +229,112 @@
                     </li>
                 </ul>
             </div>
-            <div data-bs-spy="scroll" data-bs-target="#navbar-detail" class="scrollspy-example" data-bs-offset="50">
-                <h4 class="mt-5" id="keunggulan">Keunggulan</h4>
-                <p id="keunggulan" class="deskripsi-keunggulan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris
-                    vestibulum non quam sit amet sodales.
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque
-                    ut
-                    purus sed velit varius luctus sit amet vel ante. Nullam semper velit a justo malesuada feugiat.
-                    Maecenas
-                    tempus, turpis quis consectetur condimentum, sapien leo aliquet tortor, ut hendrerit odio nulla et
-                    arcu.
-                    In pharetra ullamcorper orci sed pellentesque. Donec vulputate pharetra libero, et ullamcorper
-                    tellus
-                    fermentum sollicitudin. Nullam in laoreet lorem. Nam malesuada porttitor rutrum. Aenean scelerisque
-                    nulla metus, vitae luctus mi lobortis eu. Vivamus massa velit, malesuada in sem nec, hendrerit
-                    venenatis
-                    sapien.</p>
-                <h4 class="mt-5" id="tipe">Tipe Properti</h4>
-                <div id="tipe" class="type-wrapper">
-                    <div class="type-card card rounded-4 border-0">
-                        <div class="img-header rounded-4">
-                            <img src="/assets/image/type.png" class="card-img-top" alt="">
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <p class="price-text card-text">Rp. 140.000.000,-</p>
-                                    <p class="unit-text">Sisa <span>10 Unit</span></p>
-                                </div>
-                                <div class="favorite-icon"><i onclick="toggleFavorite(this)"
-                                        class="far fa-heart fa-lg"></i>
-                                </div>
+            <div>
+                <div id="keunggulan">
+                    <h4 class="mt-5">Keunggulan</h4>
+                    <p class="deskripsi-keunggulan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris
+                        vestibulum non quam sit amet sodales.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                        Pellentesque
+                        ut
+                        purus sed velit varius luctus sit amet vel ante. Nullam semper velit a justo malesuada feugiat.
+                        Maecenas
+                        tempus, turpis quis consectetur condimentum, sapien leo aliquet tortor, ut hendrerit odio nulla
+                        et
+                        arcu.
+                        In pharetra ullamcorper orci sed pellentesque. Donec vulputate pharetra libero, et ullamcorper
+                        tellus
+                        fermentum sollicitudin. Nullam in laoreet lorem. Nam malesuada porttitor rutrum. Aenean
+                        scelerisque
+                        nulla metus, vitae luctus mi lobortis eu. Vivamus massa velit, malesuada in sem nec, hendrerit
+                        venenatis
+                        sapien.
+                    </p>
+                    <p class="deskripsi-keunggulan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris
+                        vestibulum non quam sit amet sodales.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                        Pellentesque
+                        ut
+                        purus sed velit varius luctus sit amet vel ante. Nullam semper velit a justo malesuada feugiat.
+                        Maecenas
+                        tempus, turpis quis consectetur condimentum, sapien leo aliquet tortor, ut hendrerit odio nulla
+                        et
+                        arcu.
+                        In pharetra ullamcorper orci sed pellentesque. Donec vulputate pharetra libero, et ullamcorper
+                        tellus
+                        fermentum sollicitudin. Nullam in laoreet lorem. Nam malesuada porttitor rutrum. Aenean
+                        scelerisque
+                        nulla metus, vitae luctus mi lobortis eu. Vivamus massa velit, malesuada in sem nec, hendrerit
+                        venenatis
+                        sapien.
+                    </p>
+                </div>
+
+                <div id="tipe">
+                    <h4 class="mt-5">Tipe Properti</h4>
+                    <div class="type-wrapper">
+                        <div class="type-card card rounded-4 border-0" style="cursor: pointer;" onclick="goToDetail()">
+                            <div class="img-header rounded-4">
+                                <img src="/assets/image/type.png" class="card-img-top" alt="">
                             </div>
-                            <div class="d-flex justify-content-between mt-3">
-                                <div class="text-center">
-                                    <p class="mb-0">LT</p>
-                                    <p class="mb-0 text-secondary fw-semibold">60m2</p>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="price-text card-text">Rp. 140.000.000,-</p>
+                                        <p class="unit-text">Sisa <span>10 Unit</span></p>
+                                    </div>
+                                    <div class="favorite-icon"><i onclick="toggleFavorite(this)"
+                                            class="far fa-heart fa-lg"></i>
+                                    </div>
                                 </div>
-                                <div class="text-center">
-                                    <p class="mb-0">LB</p>
-                                    <p class="mb-0 text-secondary fw-semibold">60m2</p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="assets/bed-ic.svg" alt="">
-                                    <p class="mb-0 text-secondary fw-semibold">2</p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="assets/shower-ic.svg" alt="">
-                                    <p class="mb-0 text-secondary fw-semibold">2</p>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <div class="text-center">
+                                        <p class="mb-0">LT</p>
+                                        <p class="mb-0 text-secondary fw-semibold">60m2</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="mb-0">LB</p>
+                                        <p class="mb-0 text-secondary fw-semibold">60m2</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="assets/bed-ic.svg" alt="">
+                                        <p class="mb-0 text-secondary fw-semibold">2</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="assets/shower-ic.svg" alt="">
+                                        <p class="mb-0 text-secondary fw-semibold">2</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h4 class="mt-5" id="fasilitas">Fasilitas</h4>
-                <div class="facility-wrapper">
-                    <div class="facility-image-wrapper rounded-4">
-                        <div>
-                            <img class="facility-image rounded-4" src="assets/image/fasilitas.png" alt="">
+                <div id="fasilitas">
+                    <h4 class="mt-5" id="fasilitas">Fasilitas</h4>
+                    <div class="facility-wrapper">
+                        <div class="facility-image-wrapper rounded-4">
+                            <div>
+                                <img class="facility-image rounded-4" src="assets/image/fasilitas.png" alt="">
+                            </div>
+                            <div>
+                                <img class="facility-image rounded-4" src="assets/image/proyek-image.png" alt="">
+                            </div>
+                            <div>
+                                <img class="facility-image rounded-4" src="assets/image/fasilitas.png" alt="">
+                            </div>
                         </div>
-                        <div>
-                            <img class="facility-image rounded-4" src="assets/image/proyek-image.png" alt="">
-                        </div>
-                        <div>
-                            <img class="facility-image rounded-4" src="assets/image/fasilitas.png" alt="">
-                        </div>
-                    </div>
-                    <div class="list-wrapper">
-                        <div class="list-facility d-flex align-items-center gap-2">
-                            <i class="fas fa-check fa-sm" style="color: #4EA59C;"></i>
-                            <p class="mb-0 text-secondary">Jalur Telepon</p>
+                        <div class="list-wrapper">
+                            <div class="list-facility d-flex align-items-center gap-2">
+                                <i class="fas fa-check fa-sm" style="color: #4EA59C;"></i>
+                                <p class="mb-0 text-secondary">Jalur Telepon</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <section class="review-section">
                     <div>
                         <h4 class="mt-5 " id="ulasan">Ulasan</h4>
@@ -830,6 +862,11 @@
                 }
             });
         });
+
+        // handle go to detail
+        function goToDetail() {
+            window.location.href = 'Detail.html';
+        }
 
 
         // Looping list fasilitas

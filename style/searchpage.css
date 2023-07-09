@@ -87,20 +87,52 @@ main {
 }
 
 .custom-marker {
-  transform: translate(-40%, -50%);
+  position: relative;
   display: block;
-  text-align: center;
-  width: max-content;
-  padding: 10px;
-  font-weight: 700;
-  background-color: #000;
-  color: white;
-  border-radius: 15px;
 }
 
-.custom-marker:hover {
+.custom-marker .marker-wrapper {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  border-radius: 4px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.custom-marker .marker-wrapper:before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 8px 8px 0;
+  border-color: #000000 transparent transparent transparent;
+}
+.custom-marker .marker-wrapper .marker-text {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.custom-marker:hover .marker-wrapper {
   background-color: #ffc000;
+}
+
+.custom-marker:hover .marker-wrapper:before {
+  border-color: #ffc000 transparent transparent transparent;
+}
+
+.custom-marker:hover .marker-wrapper .marker-text {
   color: black;
+}
+
+.popupCustom {
+  /* bottom: 5px !important; */
 }
 
 .popUp-custom {

@@ -569,7 +569,7 @@
                 // Buat marker pada peta
                 const marker = L.marker(item.coordinates, {
                     icon: new L.DivIcon({
-                        html: /*html*/ `<span class="custom-marker">${item.markerPrice}</span>`
+                        html: /*html*/ `<div class="custom-marker"><div class="marker-wrapper"><div class="marker-text">${item.markerPrice}</div></div></div>`
                     })
                 });
 

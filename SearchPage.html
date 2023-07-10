@@ -152,50 +152,132 @@
                                 src="/assets/search.svg" alt=""></button>
                     </div>
                 </div>
-                <div class="custom-group input-group mx-auto">
-                    <div class="custom-select">
-                        <select class="select-type-house-desktop">
-                            <option value="0">Jenis</option>
-                            <option value="3">Semua</option>
-                            <option value="1">Subsidi</option>
-                            <option value="2">Non Subsidi</option>
-                        </select>
-                    </div>
-                    <input type="text" class="custom-input-desktop form-control border-top-0 border-bottom-0"
-                        placeholder="Lokasi/Proyek" style="font-size: 15px; font-weight: 400;">
-                    <div style="background-color: white; margin-left: 0.5px;">
+                <div class="search-wrapper">
+                    <div class="custom-group input-group mx-auto">
                         <div class="custom-select">
-                            <select class="select-price-desktop">
-                                <option value="0">Harga</option>
-                                <option value="3"> 200JT </option>
-                                <option value="1">200JT - 400JT</option>
-                                <option value="2">401JT - 700JT</option>
-                                <option value="4">700JT ++</option>
+                            <select class="select-type-house-desktop">
+                                <option value="0">Jenis</option>
+                                <option value="3">Semua</option>
+                                <option value="1">Subsidi</option>
+                                <option value="2">Non Subsidi</option>
                             </select>
                         </div>
+                        <input type="text" class="custom-input-desktop form-control border-top-0 border-bottom-0"
+                            placeholder="Lokasi/Proyek" style="font-size: 15px; font-weight: 400;">
+                        <div style="background-color: white; margin-left: 0.5px;">
+                            <div class="custom-select">
+                                <select class="select-price-desktop">
+                                    <option value="0">Harga</option>
+                                    <option value="3"> 200JT </option>
+                                    <option value="1">200JT - 400JT</option>
+                                    <option value="2">401JT - 700JT</option>
+                                    <option value="4">700JT ++</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rounded-end-pill" style="background-color: white;">
+                            <button class="btn-search btn btn-yellow rounded-pill" type="button"
+                                style="height: 100%; padding: 10px 20px;">CARI</button>
+                        </div>
                     </div>
-                    <div class="rounded-end-pill" style="background-color: white;">
-                        <button class="btn-search btn btn-yellow rounded-pill" type="button"
-                            style="height: 100%; padding: 10px 20px;">CARI</button>
-                    </div>
-                </div>
-                <div class="d-flex flex-wrap justify-content-between align-items-center mt-3">
-                    <div class="d-flex align-items-center gap-2">
-                        <p class="text-secondary mb-0">Urutkan:</p>
-                        <select class="form-select border-0  fw-semibold">
-                            <option value="0" selected>Terbaru</option>
-                            <option value="1">Termahal</option>
-                            <option value="2">Termurah</option>
-                        </select>
-                    </div>
-                    <div>
-                        <p class="text-secondary mb-0">Page 1 - 10 from 200 property</p>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mt-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <p class="text-secondary mb-0">Urutkan:</p>
+                            <select class="form-select border-0  fw-semibold">
+                                <option value="0" selected>Terbaru</option>
+                                <option value="1">Termahal</option>
+                                <option value="2">Termurah</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p class="text-secondary mb-0">Page 1 - 10 from 200 property</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card-product-wrapper">
 
                 </div>
-
+                <footer class="footer-desktop-search">
+                    <section class="container">
+                        <div class="row" style="margin-bottom: 55px;">
+                            <div class="col text-center">
+                                <img src="/assets/secondary-logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-5">
+                            <div>
+                                <p class="text-white text-uppercase fw-semibold">Navigation</p>
+                                <nav>
+                                    <ul class="navbar-nav d-flex flex-column gap-2">
+                                        <li class="nav-item">
+                                            <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                                href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                                href="#">Simulasi
+                                                KPR</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                                href="#">Berita</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                                href="#">Ajak
+                                                Teman</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div>
+                                <p class="text-white text-uppercase fw-semibold">Others</p>
+                                <nav>
+                                    <ul class="navbar-nav d-flex flex-column gap-2">
+                                        <li class="nav-item">
+                                            <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                                href="#">Developer
+                                                Login</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                                href="#">Contact</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                                href="#">Mau
+                                                pasang iklan?</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="text-center" style="margin-top: 32px;">
+                            <p class="text-white text-uppercase fw-semibold">Follow</p>
+                            <div class="d-flex gap-3 justify-content-center">
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-youtube fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-tiktok fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-instagram fa-xl"></i>
+                                </a>
+                                <a href="" class="social-media-img">
+                                    <i class="fa-brands fa-facebook-f fa-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="copyright-link text-center fw-normal mx-auto"
+                            style="margin-top: 42px; font-size: 12px; max-width: 236px;">Copyright © 2022
+                            All
+                            Rights Reserved. |
+                            Terms of
+                            Use | Privacy Policy </a>
+                    </section>
+                </footer>
+            </section>
         </div>
     </main>
 
@@ -212,17 +294,21 @@
                     <nav>
                         <ul class="navbar-nav d-flex flex-column gap-2">
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Home</a>
+                                <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                    href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Simulasi
+                                <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                    href="#">Simulasi
                                     KPR</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Berita</a>
+                                <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                    href="#">Berita</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Ajak
+                                <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                    href="#">Ajak
                                     Teman</a>
                             </li>
                         </ul>
@@ -233,14 +319,17 @@
                     <nav>
                         <ul class="navbar-nav d-flex flex-column gap-2">
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Developer
+                                <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                    href="#">Developer
                                     Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Contact</a>
+                                <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                    href="#">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-light" style="font-size: 14px;" href="#">Mau
+                                <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
+                                    href="#">Mau
                                     pasang iklan?</a>
                             </li>
                         </ul>
@@ -272,86 +361,7 @@
                 Use | Privacy Policy </a>
         </section>
     </footer>
-    <footer class="footer-desktop mt-0">
-        <section class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="/assets/secondary-logo.png" alt="">
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <p class="text-white text-uppercase fw-medium">Navigation</p>
-                            <nav>
-                                <ul class="navbar-nav d-flex flex-column gap-2">
-                                    <li class="nav-item">
-                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
-                                            href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
-                                            href="#">Simulasi
-                                            KPR</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
-                                            href="#">Berita</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
-                                            href="#">Ajak
-                                            Teman</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col">
-                            <p class="text-white text-uppercase fw-medium">Others</p>
-                            <nav>
-                                <ul class="navbar-nav d-flex flex-column gap-2">
-                                    <li class="nav-item">
-                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
-                                            href="#">Developer Login</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
-                                            href="#">Contact</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="footer-link nav-link text-white fw-light" style="font-size: 14px;"
-                                            href="#">Mau
-                                            pasang iklan?</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col">
-                            <p class="text-white text-uppercase fw-medium">Follow</p>
-                            <div class="d-flex gap-3">
-                                <a href="" class="social-media-img">
-                                    <i class="fa-brands fa-youtube fa-xl"></i>
-                                </a>
-                                <a href="" class="social-media-img">
-                                    <i class="fa-brands fa-tiktok fa-xl"></i>
-                                </a>
-                                <a href="" class="social-media-img">
-                                    <i class="fa-brands fa-instagram fa-xl"></i>
-                                </a>
-                                <a href="" class="social-media-img">
-                                    <i class="fa-brands fa-facebook-f fa-xl"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="copyright-link  text-center fw-light mx-auto" href="#">Copyright © 2022
-                All
-                Rights Reserved. |
-                Terms of
-                Use | Privacy Policy </a>
-        </section>
-    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

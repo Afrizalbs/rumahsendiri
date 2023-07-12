@@ -7,3 +7,10 @@
   background-color: #ff9900 !important;
   color: #414042 !important;
 }
+
+.btn-green {
+  background-color: #20a79c !important;
+  color: white !important;
+  padding: 16px 54px !important;
+  max-height: 55px !important;
+}

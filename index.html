@@ -148,7 +148,7 @@
                         <input type="text" class="custom-input form-control rounded-start-pill border-0"
                             placeholder="Lokasi/Proyek">
                         <button type="button" class="btn btn-warning rounded-circle fw-semibold"><img
-                                src="/assets/search.svg" alt=""></button>
+                                src="/assets/search.svg" alt="" onclick="handleFilter()"></button>
                     </div>
                 </div>
                 <div class="custom-group input-group mx-auto" style="max-width: 791px;">
@@ -187,8 +187,8 @@
                         </div>
                     </div>
                     <div class="rounded-end-pill" style="background-color: white;">
-                        <button class="btn btn-yellow py-3 px-5 rounded-pill" type="button"
-                            style="height: 100%;">CARI</button>
+                        <button class="btn btn-yellow py-3 px-5 rounded-pill" type="button" style="height: 100%;"
+                            onclick="handleFilter()">CARI</button>
                     </div>
                 </div>
                 <div class="container mx-auto d-flex align-items-center justify-content-end gap-2"
@@ -316,8 +316,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button"
-                                        class="modal-save-button btn-yellow btn rounded-pill">Terapkan</button>
+                                    <button type="button" class="modal-save-button btn-yellow btn rounded-pill"
+                                        onclick="handleFilter()">Terapkan</button>
                                 </div>
                             </div>
                         </div>
@@ -1395,6 +1395,10 @@
         function displaySimulationCalcu() {
             simulation.style.display = 'none'
             calculatorSimulationView.style.display = "block"
+        }
+
+        function handleFilter() {
+            window.location.href = 'SearchPage.html';
         }
     </script>
 </body>

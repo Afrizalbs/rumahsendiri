@@ -156,6 +156,10 @@ main {
   max-height: 55px !important;
 }
 
+.text-link {
+  color: #20a79c !important;
+}
+
 .detail-brochure {
   margin-top: 40px;
 }
@@ -233,7 +237,7 @@ main {
 }
 
 .favorite-icon {
-  color: #20a79c;
+  color: #ea0046;
   cursor: pointer;
 }
 

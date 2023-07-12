@@ -132,7 +132,7 @@ main {
 }
 
 .favorite-icon {
-  color: #20a79c;
+  color: #ea0046;
   cursor: pointer;
 }
 
@@ -180,7 +180,7 @@ main {
 .sell-circle {
   width: 21px;
   height: 21px;
-  background-color: #c6e7e4;
+  background-color: #ecd5d6;
 }
 
 .letter-location {
@@ -221,12 +221,13 @@ main {
 }
 
 [type="radio"]:checked + .house-label {
-  border: 2px solid red;
+  background-color: #ffc000;
+  color: black;
 }
 
 [type="radio"]:disabled + .house-label {
-  background-color: #c6e7e4;
-  color: gray;
+  background-color: #ecd5d6;
+  color: white;
 }
 
 .btn-select-unit {

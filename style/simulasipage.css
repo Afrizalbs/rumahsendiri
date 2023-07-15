@@ -130,6 +130,14 @@ main {
   font-weight: 400;
   line-height: normal;
   text-align: justify;
+  padding-bottom: 10px;
+  border-bottom: 1px solid silver;
+}
+
+.banner-wrapper {
+  margin-top: 60px;
+  max-width: 729px;
+  max-height: 202px;
 }
 
 @media (orientation: portrait) {
@@ -209,5 +217,16 @@ main {
 
   .payment {
     column-gap: 10px;
+  }
+
+  .banner-wrapper {
+    max-width: 320px;
+    margin-top: 0px !important;
+  }
+
+  .banner-wrapper div img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
   }
 }

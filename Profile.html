@@ -149,8 +149,12 @@
                     <div class="d-flex flex-column gap-2">
                         <label class="label-input-profile text-uppercase fw-semibold" for="password">password</label>
                         <div class="d-flex gap-2 align-items-center">
-                            <input id="password" class="form-input-profile rounded-pill" type="password"
-                                placeholder="masukan password" value="qwerty" readonly>
+                            <div class="input-group">
+                                <input id="password" class="form-input-profile form-control rounded-start-pill"
+                                    type="password" placeholder="masukan password" value="qwerty" readonly>
+                                <span toggle="#password" class="input-group-text fas fa-eye show-hide"><i
+                                        class=""></i></span>
+                            </div>
                             <div class="edit-input-toogle" onclick="toggleEditInput('password')">
                                 <img src="assets/ic-pencil.svg">
                             </div>
@@ -437,9 +441,19 @@
             });
         });
 
+        // handle password visible
+        $(".show-hide").click(function () {
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            let input = $($(this).attr("toggle"));
+            if (input.attr("type") === "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+
         // toogle input
         function toggleEditInput(inputID) {
-            console.log(inputID);
             const input = document.getElementById(inputID);
             if (input.readOnly) {
                 input.readOnly = false;

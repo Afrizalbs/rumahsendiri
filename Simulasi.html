@@ -101,7 +101,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-black" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="active nav-item">
                             <a class="nav-link text-black" href="#">Simulasi KPR</a>
                         </li>
                         <li class="nav-item">
@@ -524,16 +524,9 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="select.js"></script>
     <script type="text/javascript" src="jquery.star-rating-svg.js"></script>
     <script>
-        // Sticky Navbar
-        $(window).scroll(function () {
-            let header = $("header");
-            let mainLogo = $(".main-logo");
-            header.toggleClass("sticky", $(window).scrollTop() > 0);
-            mainLogo.toggleClass("sticky", $(window).scrollTop() > 0);
-        });
-
         // Function menampilkan element simulasi KPR setelah klik hitung
         const calculatorSimulationView = document.querySelector(".dekstop-view")
         const simulation = document.querySelector(".dekstop-view-result")

@@ -51,18 +51,18 @@
                                     <i class="fa-regular fa-user fa-sm"></i>Akun Saya
                                 </a>
                                 <div class="collapse" id="collapseExample">
-                                    <a href="#">Account Settings</a>
-                                    <a href="#">My Booking</a>
+                                    <a href="Profile.html">Account Settings</a>
+                                    <a href="MyBooking.html">My Booking</a>
                                 </div>
-                                <a href="#"><i class="fa-regular fa-heart fa-sm"></i>Favorite</a>
-                                <a href="#"><i class="fa-regular fa-object-group fa-sm"></i>Bandingkan</a>
+                                <a href="Favorite.html"><i class="fa-regular fa-heart fa-sm"></i>Favorite</a>
+                                <a href="Compare.html"><i class="fa-regular fa-object-group fa-sm"></i>Bandingkan</a>
                             </div>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <a href="#">Home</a>
-                        <a href="#">Simulasi KPR</a>
+                        <a href="index.html">Home</a>
+                        <a href="Simulasi.html">Simulasi KPR</a>
                         <a href="#">Berita</a>
                         <a href="#">Ajak Teman</a>
                         <button class="btn btn-warning py-3 px-5 rounded-pill fw-medium" type="button"
@@ -86,28 +86,28 @@
                                     Login
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Account Setting</a></li>
-                                    <li><a class="dropdown-item" href="#">My Booking</a></li>
+                                    <li><a class="dropdown-item" href="Profile.html">Account Setting</a></li>
+                                    <li><a class="dropdown-item" href="MyBooking.html">My Booking</a></li>
                                     <li><a class="dropdown-item text-danger" href="#">Sign Out</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="d-flex column-gap-2">
                             <img src="/assets/favorite.svg" alt="">
-                            <a class="nav-link text-black" href="#">Favorite</a>
+                            <a class="nav-link text-black" href="Favorite.html">Favorite</a>
                         </li>
                         <li class="d-flex column-gap-2">
                             <img src="/assets/compare.svg" alt="">
-                            <a class="nav-link text-black" href="#">Bandingkan</a>
+                            <a class="nav-link text-black" href="Compare.html">Bandingkan</a>
                         </li>
                     </div>
                     <ul class="nav d-flex gap-5 justify-content-end"
                         style="font-family: 'Poppins'; font-weight: 500; font-size: 15px;">
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="#">Home</a>
+                            <a class="nav-link text-black" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="#">Simulasi KPR</a>
+                            <a class="nav-link text-black" href="Simulasi.html">Simulasi KPR</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-black" href="#">Berita</a>
@@ -343,16 +343,9 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="select.js"></script>
     <script type="text/javascript" src="jquery.star-rating-svg.js"></script>
     <script>
-        // Sticky Navbar
-        $(window).scroll(function () {
-            let header = $("header");
-            let mainLogo = $(".main-logo");
-            header.toggleClass("sticky", $(window).scrollTop() > 0);
-            mainLogo.toggleClass("sticky", $(window).scrollTop() > 0);
-        });
-
         // handle go to detail
         function goToDetail() {
             window.location.href = 'Detail.html';

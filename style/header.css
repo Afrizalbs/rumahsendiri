@@ -58,6 +58,11 @@ header.sticky {
   border-bottom: 2px solid #20a79c;
 }
 
+.nav-wrapper > ul > li.active > a {
+  color: #20a79c !important;
+  border-bottom: 2px solid #20a79c;
+}
+
 .nav-wrapper > ul > li > a {
   border-bottom: 2px solid #fff;
 }

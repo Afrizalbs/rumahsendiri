@@ -56,7 +56,7 @@
                     </div>
                     <div class="offcanvas-body">
                         <a href="index.html">Home</a>
-                        <a href="#">Simulasi KPR</a>
+                        <a href="Simulasi.html">Simulasi KPR</a>
                         <a href="#">Berita</a>
                         <a href="#">Ajak Teman</a>
                         <button class="btn btn-warning py-3 px-5 rounded-pill fw-medium" type="button"
@@ -101,7 +101,7 @@
                             <a class="nav-link text-black" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="#">Simulasi KPR</a>
+                            <a class="nav-link text-black" href="Simulasi.html">Simulasi KPR</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-black" href="#">Berita</a>
@@ -159,7 +159,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn-yellow btn rounded-pill fw-semibold" style="">Save</button>
+                    <button class="btn-yellow btn rounded-pill fw-semibold">Save</button>
                 </div>
                 <div class="d-flex flex-column gap-4 ">
                     <div class="d-flex flex-column gap-2">
@@ -414,14 +414,6 @@
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="jquery.star-rating-svg.js"></script>
     <script>
-        // Sticky Navbar
-        $(window).scroll(function () {
-            let header = $("header");
-            let mainLogo = $(".main-logo");
-            header.toggleClass("sticky", $(window).scrollTop() > 0);
-            mainLogo.toggleClass("sticky", $(window).scrollTop() > 0);
-        });
-
         // handle go to detail
         function goToDetail() {
             window.location.href = 'Detail.html';

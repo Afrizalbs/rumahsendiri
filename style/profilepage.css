@@ -191,6 +191,8 @@ input:read-only {
 
 .btn-yellow {
   width: 50%;
+  padding: 16px 54px !important;
+  box-shadow: 0px 15px 15px 0px rgba(255, 192, 0, 0.2);
 }
 
 /* responsive */
@@ -198,6 +200,7 @@ input:read-only {
   .profile-detail {
     flex-wrap: wrap;
     min-height: 120vh;
+    gap: 10px;
   }
 
   .profile-picture {
@@ -215,6 +218,7 @@ input:read-only {
 
   .btn-yellow {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .custom-file {

@@ -737,7 +737,12 @@
                             </div>
                             <div class="option-wrapper">
                                 <p class="" style="font-size: 12px;">Jangka Waktu KPR</p>
-                                <div class="select-wrapper border rounded-pill">
+                                <div class="input-group">
+                                    <input type="number" inputmode="numeric"
+                                        class="year-input rounded-start-pill form-control">
+                                    <span class="year-input-text input-group-text rounded-end-pill">Tahun</span>
+                                </div>
+                                <!-- <div class="select-wrapper border rounded-pill">
                                     <select class="select-native form-select border-0 rounded-pill fs-6">
                                         <option selected>Pilih</option>
                                         <option value="0">1 Tahun</option>
@@ -754,16 +759,8 @@
                                             <option value="3">15 Tahun</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-
-                            <!-- <select class="form-select form-select-lg rounded-pill fs-6 py-3 px-4">
-                                <option selected>1 Tahun</option>
-                                <option value="1">5 Tahun</option>
-                                <option value="2">10 Tahun</option>
-                                <option value="3">15 Tahun</option>
-                            </select> -->
-
                         </div>
                         <div class="row" style="margin-top: 30px;">
                             <p class="col" style="font-size: 12px;">Pilih Bank dan suku bunganya</p>
@@ -814,8 +811,9 @@
                         </div>
                         <div class="row" style="margin-top: 45px;">
                             <div class="col">
-                                <button type="button" class="btn btn-yellow rounded-pill shadow-lg fw-semibold"
-                                    style="padding: 16px 54px;" onclick="displayResult()">Hitung</button>
+                                <button type="button" class="btn btn-yellow rounded-pill fw-semibold w-100"
+                                    style="padding: 16px 54px; box-shadow: 0px 15px 15px 0px rgba(255, 192, 0, 0.20);"
+                                    onclick="displayResult()">Hitung</button>
                             </div>
                         </div>
                     </div>

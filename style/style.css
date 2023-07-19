@@ -372,6 +372,14 @@ main {
   row-gap: 30px;
 }
 
+.year-input {
+  padding: 20px !important;
+}
+
+.year-input-text {
+  border: 1px solid #dbdbdb !important;
+}
+
 .payment {
   display: flex;
   column-gap: 30px;

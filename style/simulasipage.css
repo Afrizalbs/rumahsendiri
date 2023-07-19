@@ -75,6 +75,10 @@ main {
   border: 2px solid #4ea59c;
 }
 
+.year-input {
+  padding: 20px !important;
+}
+
 .custom-group-simulation {
   border-radius: 500px;
   border-width: 2px;
@@ -102,7 +106,8 @@ main {
 }
 
 .informasi-wrapper {
-  margin-top: 40px;
+  margin-top: 50px;
+  border-bottom: 1px solid silver;
 }
 
 .informasi-title {
@@ -123,6 +128,14 @@ main {
   color: #616768;
 }
 
+.fa-chevron-down {
+  transition: transform 0.3s ease-in-out;
+}
+
+.informasi-title.collapsed .fa-chevron-down {
+  transform: rotate(-90deg);
+}
+
 .content-text {
   color: #616768;
   font-size: 14px;
@@ -131,7 +144,6 @@ main {
   line-height: normal;
   text-align: justify;
   padding-bottom: 10px;
-  border-bottom: 1px solid silver;
 }
 
 .banner-wrapper {

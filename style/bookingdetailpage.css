@@ -1,0 +1,280 @@
+main {
+  padding-top: 104px;
+}
+
+.breadcrumb-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle-text {
+  color: #666;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.steps {
+  width: 921px;
+  height: 67px;
+  flex-shrink: 0;
+  margin-inline: auto;
+  background-color: #455b59;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.steps ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li.current a {
+  color: #ffc000;
+}
+
+.steps ul a {
+  text-decoration: none;
+  color: #cecece;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.title {
+  display: none;
+}
+
+.body {
+  margin-top: 50px;
+}
+
+.actions ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  gap: 40px;
+}
+
+.actions {
+  margin-top: 50px;
+}
+
+.actions ul li:nth-child(1) {
+  display: none;
+}
+
+.actions ul a {
+  text-decoration: none;
+  color: #414042;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 167px;
+  padding: 16px 54px;
+  border-radius: 50px;
+  background: #ffc000;
+  box-shadow: 0px 25px 25px 0px rgba(255, 192, 0, 0.2);
+}
+
+.actions ul a:hover {
+  background-color: #ff9900 !important;
+  color: #414042 !important;
+}
+
+.form-check input[type="checkbox"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.form-check-label {
+  position: relative;
+  cursor: pointer;
+  padding: 50px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+}
+
+.icon-checkbox {
+  opacity: 0;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: #4ea59c;
+}
+
+[type="checkbox"]:checked + .form-check-label {
+  border: 2px solid #4ea59c;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+[type="checkbox"]:checked + .form-check-label .icon-checkbox {
+  opacity: 1;
+}
+
+.table {
+  width: 919px !important;
+  margin-inline: auto;
+}
+
+.table tr td {
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.card-product {
+  width: 733px;
+  display: flex;
+  cursor: pointer;
+  margin-inline: auto;
+  margin-block: 60px 100px;
+}
+
+.product-image {
+  width: 255px;
+  height: 255px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.detail-product {
+  padding-inline: 30px;
+  padding-block: 19px 16px;
+  width: 100%;
+}
+
+.title-card {
+  color: #4ea59c;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.location-text {
+  color: #616768;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.price-text {
+  color: #000;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.spesification-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.spesification-wrapper .d-flex {
+  width: 50%;
+}
+
+.info-title {
+  color: #666;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0.2rem;
+}
+
+.info-value {
+  color: #4ea59c;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-description {
+  color: #606768;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.text-description span {
+  color: #4ea59c;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (orientation: portrait) {
+  .product-image {
+    margin-inline: auto;
+  }
+
+  .card-product {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .spesification-wrapper {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+
+  .spesification-wrapper .d-flex {
+    width: 100%;
+  }
+
+  .steps {
+    width: 100%;
+  }
+
+  .select-bank-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-check {
+    padding-left: 0 !important;
+  }
+
+  .form-check-label {
+    padding: 25px;
+  }
+
+  .table {
+    width: 100% !important;
+    margin-inline: auto;
+  }
+}

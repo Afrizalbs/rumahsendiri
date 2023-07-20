@@ -128,7 +128,7 @@
             </div>
 
             <div class="card-product-wrapper">
-                <div class="card-product">
+                <div class="card-product" onclick="goToBookingDetail()">
                     <img class="product-image" src="assets/image/proyek-image.png" alt="">
                     <div class="detail-product">
                         <p class="title-card">Kencana Mas Residence</p>
@@ -368,6 +368,11 @@
             });
         });
 
+
+        // handle go to detail
+        function goToBookingDetail() {
+            window.location.href = 'BookingDetail.html';
+        }
     </script>
 </body>
 

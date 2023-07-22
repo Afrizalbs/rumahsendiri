@@ -400,17 +400,22 @@
                 <div>
                     <label for="AngsuranFormControl" class="form-label text-capitalize">Kemampuan Angsuran per
                         bulan</label>
-                    <input type="number" class="form-control rounded-pill px-3 py-2 border-2" id="AngsuranFormControl"
-                        placeholder="Rp.">
+                    <input type="text" inputmode="numeric" class="form-control rounded-pill px-3 py-2 border-2"
+                        id="AngsuranFormControl" placeholder="Rp.">
                 </div>
                 <div class="">
                     <label class="form-label text-capitalize">Jangka waktu KPR</label>
-                    <select class="select-kpr-year form-select rounded-pill px-3 py-2 border-2">
+                    <div class="input-group">
+                        <input type="text" inputmode="numeric"
+                            class="year-input rounded-start-pill form-control px-3 py-2 border-2">
+                        <span class="input-group-text rounded-end-pill" id="basic-addon2">Tahun</span>
+                    </div>
+                    <!-- <select class="select-kpr-year form-select rounded-pill px-3 py-2 border-2">
                         <option value="0" selected>1 Tahun</option>
                         <option value="1">5 Tahun</option>
                         <option value="2">10 Tahun</option>
                         <option value="3">15 Tahun</option>
-                    </select>
+                    </select> -->
                 </div>
                 <div>
                     <button class="btn-calculate-kpr btn-yellow btn rounded-pill fw-semibold">Hitung</button>

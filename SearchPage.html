@@ -24,9 +24,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
         integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
         integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
 </head>
 
 <body>
@@ -481,6 +484,16 @@
                     markerPrice: '140 JT'
                 },
                 {
+                    title: 'Kencana Mas Residence',
+                    location: 'Cikeas Residence, Bogor',
+                    lt: '90m2',
+                    lb: '60m2',
+                    price: 'Rp 140.000.000',
+                    image: 'https://source.unsplash.com/random/800x600/?house',
+                    coordinates: [-6.1726422, 106.7660169],
+                    markerPrice: '140 JT'
+                },
+                {
                     title: 'Puri Taman Sari',
                     location: 'Jalan Kebon Jeruk, Jakarta Barat',
                     lt: '90m2',
@@ -514,7 +527,7 @@
             ];
 
             // Inisialisasi peta Leaflet
-            const map = L.map('map').setView([-6.2088, 106.8456], 11);
+            const map = L.map('map').setView([-6.2088, 106.8456], 9);
             // Add tile layer from OpenStreetMap
             const tileLayerUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
             const tileLayerOptions = {
@@ -526,7 +539,8 @@
                 map.invalidateSize();
             }, 100);
 
-
+            // marker cluster
+            const markers = L.markerClusterGroup();
 
             // Looping untuk membuat elemen kartu dan marker
             $.each(data, function (index, item) {
@@ -569,6 +583,7 @@
                     'className': 'popupCustom'
                 }
 
+
                 // Buat marker pada peta
                 const marker = L.marker(item.coordinates, {
                     icon: new L.DivIcon({
@@ -580,8 +595,9 @@
                 // Bind popup dan tautkan dengan elemen kartu
                 marker.bindPopup(customPopup, customOptions);
                 // Tambahkan marker ke dalam peta
-                marker.addTo(map);
-
+                markers.addLayer(marker);
+                map.addLayer(markers);
+                // marker.addTo(map);
                 // Ambil tautan popup marker yang sudah dibuat
                 const popup = marker.getPopup();
 

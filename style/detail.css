@@ -164,6 +164,8 @@ main {
   aspect-ratio: 16/9;
   width: 948px;
   height: 351px;
+  border: 1px solid #c6e7e4;
+  border-radius: 15px;
 }
 
 .title-denah {

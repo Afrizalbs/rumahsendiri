@@ -14,6 +14,54 @@ main {
   font-weight: 400;
 }
 
+.nav-payment {
+  width: 921px;
+  height: 67px;
+  flex-shrink: 0;
+  margin-inline: auto;
+  background-color: #455b59;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  & .nav-link {
+    color: #cecece;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    &:hover {
+      color: #ffc000 !important;
+    }
+
+    &:focus {
+      color: #ffc000 !important;
+    }
+  }
+
+  & .nav-link.active {
+    color: #ffc000 !important;
+  }
+}
+
+.nav-payment .nav-link {
+  color: #cecece;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.nav-payment .nav-link.active {
+  color: #ffc000 !important;
+}
+
+.nav-payment .nav-link:hover {
+  color: #ffc000 !important;
+}
+
 .steps {
   width: 921px;
   height: 67px;
@@ -91,6 +139,10 @@ main {
   color: #414042 !important;
 }
 
+.select-bank-wrapper {
+  gap: 3rem;
+}
+
 .form-check input[type="checkbox"] {
   position: absolute !important;
   opacity: 0 !important;
@@ -123,6 +175,22 @@ main {
 
 [type="checkbox"]:checked + .form-check-label .icon-checkbox {
   opacity: 1;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.btn-yellow {
+  padding: 16px 54px !important;
+  box-shadow: 0px 25px 25px 0px rgba(255, 192, 0, 0.2);
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  color: #414042 !important;
 }
 
 .table {
@@ -256,21 +324,56 @@ main {
     width: 100%;
   }
 
+  .nav-payment {
+    width: 100%;
+
+    & .nav-link {
+      padding: 0;
+    }
+  }
+
   .steps {
     width: 100%;
   }
 
   .select-bank-wrapper {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
+
+    & .form-check {
+      padding-left: 0 !important;
+
+      & .icon-checkbox {
+        right: 10px;
+        top: 10px;
+      }
+    }
   }
 
-  .form-check {
-    padding-left: 0 !important;
+  .select-bank-wrapper .form-check {
+    padding-left: 0;
+  }
+
+  .icon-checkbox {
+    right: 10px;
+    top: 10px;
   }
 
   .form-check-label {
-    padding: 25px;
+    padding: 15px;
+  }
+
+  [type="checkbox"]:checked + .form-check-label {
+    border: 2px solid #4ea59c;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px;
+  }
+
+  .btn-yellow {
+    width: 100%;
   }
 
   .table {

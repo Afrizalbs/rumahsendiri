@@ -339,7 +339,8 @@ main {
   .select-bank-wrapper {
     /* flex-direction: column; */
     flex-wrap: wrap;
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 2rem;
     align-items: center;
 
     & .form-check {

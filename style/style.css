@@ -476,6 +476,12 @@ main {
   background-color: #4ea59c;
 }
 
+.testimoni-card-text {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 35px;
+}
+
 .news-wrapper .slick-slide {
   margin: 0 15px;
 }
